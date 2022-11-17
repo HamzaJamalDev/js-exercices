@@ -80,7 +80,7 @@ for (let i = 0; i <= 15; i++) {
     else
         console.log(i + " est impair")
 }*/
-// Exercice 6
+/* Exercice 6
 for (let i = 1; i < 101; i++) {
     if (i % 3 === 0 && i % 5 === 0) {
         console.log("multiple de trois et cinq");
@@ -94,4 +94,12 @@ for (let i = 1; i < 101; i++) {
     else {
         console.log(i);
     }
+}*/
+// Exercice 7
+for (let i = 1; i < 6; i++) {
+    let s = "";
+    for (let j = 0; j < i; j++) {
+        s += "*";
+    }
+    console.log(s);
 }
