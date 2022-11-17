@@ -73,10 +73,25 @@ if (num1 > num2 && num1 > num3 && num1 > num4 && num1 > num5) {
 }
 
 alert(max);*/
-// Exercice 5
+/* Exercice 5
 for (let i = 0; i <= 15; i++) {
     if (i % 2 === 0)
         console.log(i + " est pair")
     else
         console.log(i + " est impair")
+}*/
+// Exercice 6
+for (let i = 1; i < 101; i++) {
+    if (i % 3 === 0 && i % 5 === 0) {
+        console.log("multiple de trois et cinq");
+    }
+    else if (i % 5 === 0) {
+        console.log("multiple de cinq");
+    }
+    else if (i % 3 === 0) {
+        console.log("multiple de trois");
+    }
+    else {
+        console.log(i);
+    }
 }
