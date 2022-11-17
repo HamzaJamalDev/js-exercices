@@ -52,7 +52,7 @@ if (num1 < num2 && num1 < num3) {
 }
 
 alert(message);*/
-// Exercice 4
+/* Exercice 4
 let num1 = parseInt(prompt("Entrez un nombre (num1)", 0));
 let num2 = parseInt(prompt("Entrez un nombre (num2)", 0));
 let num3 = parseInt(prompt("Entrez un nombre (num3)", 0));
@@ -72,4 +72,11 @@ if (num1 > num2 && num1 > num3 && num1 > num4 && num1 > num5) {
     max = num5;
 }
 
-alert(max);
+alert(max);*/
+// Exercice 5
+for (let i = 0; i <= 15; i++) {
+    if (i % 2 === 0)
+        console.log(i + " est pair")
+    else
+        console.log(i + " est impair")
+}
