@@ -103,16 +103,3 @@ for (let i = 1; i < 6; i++) {
     }
     console.log(s);
 }
-
-//Exercice 8
-let s = ""
-let n = prompt("size of matrix:")
-for(let i = 0; i < n ; i++)
-{
-    for (let i1 = 0; i1 < n; i1++)
-    {
-        s += (i1 == i ? "1" : "0")
-    }
-    console.log(s)
-    s = ""
-}
