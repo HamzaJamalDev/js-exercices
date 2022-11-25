@@ -1,6 +1,6 @@
 //Exercice 1
 
-function PlusGrand(Tableau, nombre)
+function PlusGrand(tableau, nombre)
 {
     for(let i of Tableau)
     {
