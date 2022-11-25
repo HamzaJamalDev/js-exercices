@@ -1,0 +1,153 @@
+//Exercice 1
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+            let n = prompt("veuillez entrer le nombre souhaité",0);
+
+
+        function elementtab(tab,n){
+
+            for (let i=0 ; i<n ; i++)
+            {
+
+               console.log(tab[i]);
+
+            }
+        }
+        let tab = [6,8,0,9,0,55,8];
+        
+        console.log("les elements du tableau selon le nombre souhaite");
+        elementtab(tab,n);
+
+    </script>
+    
+</body>
+</html>
+
+//Exercice2
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+            let n = prompt("veuillez entrer le nombre souhaité",0);
+
+
+    function el(tab,n){
+
+        for (let i = tab.length-1; i >= tab.length-n; i--)
+        {
+
+        console.log(tab[i]);
+
+        }
+    }
+    let tab = [6,8,0,9,0,55,8];
+
+    console.log("les elements du tableau selon le nombre souhaite");
+    el(tab,n);
+    </script>
+    
+</body>
+</html>
+
+//EXERCICE3
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+            let n = prompt("veuillez entrer valeur souhaité",0);
+
+
+        function dichotomie(tab,n){
+
+            for (let i = tab.length-1; i >= tab.length-n; i--)
+            {
+             if(tab[i]==n){
+                 console.log("la valeur ", n ," existe dans le tableau dans la position :", i+1);
+             }
+             else{
+                console.log(" la valeur ",n," n'existe pas dans le tableau");
+             }
+           
+
+            }
+        }
+        let tab = [6,8,0,9,0,55,8];
+
+        
+        dichotomie(tab,n);
+
+
+
+
+    </script>
+</body>
+</html>
+
+//EXERCICE 6
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+          function frequent(tab){
+            let t= new Array();
+            for (let i=0;i<tab.length;i++){
+               let count =0;
+               for (let j=0;j<tab.length;j++){
+                    if (tab[i]==tab[j])
+                    {
+                        count++;
+                       
+                    } 
+                    
+               }
+               t=count;
+               for(let k=0;k<t.length;k++){
+                    let max=0;
+                    for(let g=0;g<t.length;g++){
+                        if(t[k]<t[g]){
+                            max=t[k];
+                        }
+                    }console.log("l'element le plus frequent dans le tableau est ",tab[i] ," il est apparu  " ,max," fois");console.log(t);
+               }
+               
+                
+            }
+
+          }
+
+        let tab = [1,9,2,2,2,0];
+        frequent(tab);
+
+
+
+    </script>
+</body>
+</html>
