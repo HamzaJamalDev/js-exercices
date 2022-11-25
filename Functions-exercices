@@ -1,0 +1,41 @@
+//Question2
+let t = [1,2,3,4,5,6,7,8,9,10];
+let n = prompt("Entrer un nombre de votre choix",0);
+
+function FirstElements(tableau,nombre)
+{
+    for (let i = 0 ; i < n ; i++)
+    {  
+        console.log(tableau[i]);
+    }
+}
+FirstElements(t,n);
+
+//Question n°=3
+let t = [1,2,3,4,5,6,7,8,9,10];
+let n = prompt("Entrer un nombre de votre choix",0);
+
+function LastElements(tableau,nombre)
+{
+    for (let i = tableau.length-1 ; i >= tableau.length-nombre ; i--)
+    {  
+        console.log(tableau[i]);
+    }
+}
+LastElements(t,n);
+
+// Question n°=4
+function FindNumber(tableau,n)
+{
+    for(var i = 0; i < tableau.length ; i++) 
+    {
+	if(n == tableau[i])
+     {
+		console.log('Ce nombre existe');
+        
+	 }  
+    }
+}
+let t  = [11, 20, 8, 6, 17];
+let m = prompt("entrer un nombre",0);
+FindNumber(t,m);
