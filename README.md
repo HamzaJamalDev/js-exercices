@@ -5,7 +5,7 @@ Solutions des exercices JavaScript
 
 let n  = prompt("donner un nombre");
 function factorielle(n) {
-    // 0! =1, 1! =0   
+    // 0! =1, 1! =1  
     if(n===0||n===1){
   return 1;
    }
