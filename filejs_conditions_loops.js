@@ -96,10 +96,13 @@ for (let i = 1; i < 101; i++) {
     }
 }*/
 // Exercice 7
-for (let i = 1; i < 6; i++) {
-    let s = "";
-    for (let j = 0; j < i; j++) {
-        s += "*";
-    }
-    console.log(s);
-}
+// for (let i = 1; i < 6; i++) {
+//     let s = "";
+//     for (let j = 0; j < i; j++) {
+//         s += "*";
+//     }
+//     console.log(s);
+// }
+
+
+// MED AFKARI 
