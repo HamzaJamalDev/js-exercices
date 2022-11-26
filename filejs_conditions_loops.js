@@ -102,4 +102,6 @@ for (let i = 1; i < 6; i++) {
         s += "*";
     }
     console.log(s);
+    console.log("AYOUB MOUNADI");
 }
+//EX7
