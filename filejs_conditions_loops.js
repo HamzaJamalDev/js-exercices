@@ -103,3 +103,19 @@ for (let i = 1; i < 6; i++) {
     }
     console.log(s);
 }
+// Exercice 8 matrice
+let n = parseInt(prompt("Entrez un nombre (num1)", 0));
+
+function matrice(n){
+for (let i = 0; i < n; i++) {
+     
+    for (let j = 0; j < n; j++) {
+       if(i==j){
+            console.log(1);
+       }else{
+            console.log(0);
+       }
+    }
+    
+}
+    matrice(n);
