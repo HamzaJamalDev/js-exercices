@@ -103,3 +103,22 @@ for (let i = 1; i < 6; i++) {
     }
     console.log(s);
 }
+
+// Ajout d un exercice sur les tableaux 
+function greaterThan(tab,n)
+{
+let t = [];
+for (let i=0 ; i<tab.length ; i++)
+  if(tab[i] > n)
+ {
+  t.push(tab[i]);
+}
+ return ;
+}
+
+let a=[1,88,99,10,-1];
+let nb = -1;
+
+
+greaterThan(a,nb);
+
