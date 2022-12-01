@@ -1,18 +1,26 @@
-//ex3 les tableaux:
-let arr=[12,55,11,8,-22,6,7];
-let n=Number(prompt());
-function go(arr,n)
+
+//ex4 objet
+function Etudiant(n,p,a,no)
 {
-    if(n>arr.length)
-    {
-        for(let i=0 ;i <arr.length;i++)
-        {  let  last = arr[arr.length-i-1];
-        console.log(last);}
-    }
-    else 
-    {for(let i=0 ;i < n;i++)
-        {  let  last = arr[arr.length-i-1];
-        console.log(last);}
-        }
+    this.nom=n;
+    this.age=a;
+    this.prenom=p;
+    this.note=no;
+
 }
-go(arr,n);
+Etudiant.prototype.prop = function(){
+    let proto= 'nom';
+    let c=0;
+ for(let i in this)
+ {
+    if(i===proto) {c++; break;}
+     
+ }
+if(c!=0) {return "se trouve";}
+else return "se trouve pas";
+};
+
+let othmane=new Etudiant('badaoui','othmane',20,20);
+//console.log(othmane);
+console.log(othmane);
+console.log(othmane.prop());
