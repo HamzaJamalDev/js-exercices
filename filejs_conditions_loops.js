@@ -96,10 +96,19 @@ for (let i = 1; i < 101; i++) {
     }
 }*/
 // Exercice 7
-for (let i = 1; i < 6; i++) {
+/*for (let i = 1; i < 6; i++) {
     let s = "";
     for (let j = 0; j < i; j++) {
         s += "*";
     }
     console.log(s);
-}
+}*/
+
+// Exercice 1 : Objects 
+let etudiant = {nom : "Aziz Ahmed",
+                module : "Javascript",
+                age : 18};
+console.log(etudiant);
+
+let count = Object.keys(etudiant).length;
+console.log(count);
