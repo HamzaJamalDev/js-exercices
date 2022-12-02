@@ -96,10 +96,87 @@ for (let i = 1; i < 101; i++) {
     }
 }*/
 // Exercice 7
-for (let i = 1; i < 6; i++) {
-    let s = "";
-    for (let j = 0; j < i; j++) {
-        s += "*";
-    }
-    console.log(s);
+//for (let i = 1; i < 6; i++) {
+//  let s = "";
+//   for (let j = 0; j < i; j++) {
+//      s += "*";
+//   }
+//console.log(s);
+//}
+
+
+
+// Write a JavaScript program that accept two integers and display the larger.
+let x = prompt("Saisir une valeur : ",0);
+let y = prompt("Saisir une valeur : ",0);
+
+function check(x,y){    
+     console.log(Math.max(x,y));
 }
+check(x,y);
+
+
+// Write a JavaScript conditional statement to find the sign of product of three numbers. Display an alert box with the specified sign
+let a = prompt("Saisir une valeur : ",0);
+let b = prompt("Saisir une valeur : ",0);
+let c = prompt("Saisir une valeur : ",0);
+function Signe_de_produit(a,b,c){
+if(a*b*c<0)
+console.log("le signe est : -");
+else
+console.log("le signe est : +");
+}
+Signe_de_produit(a,b,c);
+
+// écrire un programme qui affiche le plus grand nombre dans un tableau : 
+
+let n =prompt("Saisir nombre de cases  : ",0)
+var tab=[]
+function check (tab){
+for(let i=0;i<n;i++){
+    tab[i]=prompt("Saisir une valeur : ",0);
+}
+console.log(Math.max(...tab));
+}
+check(tab);
+
+// écrire un programme javascript qu'il fait la création d'une structure qui contient le nom et le prenom et la note ,
+// et faire la moyenne de tous les éleves : 
+
+let  etudiant ={
+    
+    firstName:"",
+    lastName:"",
+    Note:[],
+    Matricule:0
+}
+let nbr_etud=prompt("Saisir le nombre d'étudiant")
+let tab=Array(etudiant);
+function Saisir (tab){
+for(let i = 0;i<nbr_etud;i++){
+    tab[i].firstName=prompt("Saisir le prenom d'etudiant :",i);
+    tab[i].lastName=prompt("Saisir le nom d'étudiant :",i);
+    let nbr_note=prompt("Saisir le nombre des notes de ce étudiant :")
+    for(let j = 0 ; j<nbr_note;j++){
+        tab[i].Note[j]=prompt("Saisir une note :");
+    }
+    tab[i].Matricule++;
+}
+}
+Saisir(tab) 
+console.log(tab)
+function moy(tab ) {
+let i, s =0
+let x=prompt("Veuillez entrer le Matricule d'étudiant")
+ for( i =0;i<(tab).length;i++){
+if(tab[i].Matricule===x){
+for(let j = 0 ; j<(tab.Note).length;j++)
+{
+    s=s+tab[i].Note[j];
+}
+}
+ }
+return s/(tab.Note).length;
+}
+console.log(moy(tab))
+
