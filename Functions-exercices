@@ -17,7 +17,7 @@ let n = prompt("Entrer un nombre de votre choix",0);
 
 function LastElements(tableau,nombre)
 {
-    for (let i = tableau.length-1 ; i >= tableau.length-nombre ; i--)
+    for (let i = tableau.length-nombre ; i<tableau.length ; i++)
     {  
         console.log(tableau[i]);
     }
