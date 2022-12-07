@@ -106,7 +106,7 @@ for (let i = 1; i < 6; i++) {
 
 //combinations of elements
 /*exemple any given arr*/
-let arr = ["blue", "white", "black", "orange"];
+let arr = ["blue", "white", "black", "rain"];
 let n = 2;
  function combine(arr, n) {
 	var i, j, combo, head, tail;
