@@ -126,15 +126,16 @@ function Etudiant(nom , module, note){
     this.module = module ;
     this.note   = note ;
 
-    this.exists = function(attr){
-        for (const key in this) {
-            if(key == attr){
-                return true ;
-                break;
-            }
+}
+
+
+Etudiant.prototype.exists = function(attr){
+    for (const key in this) {
+        if(key == attr){
+            return true ;
         }
-        return false ;
     }
+    return false ;
 }
 
 let etudiant_1 = new Etudiant(
