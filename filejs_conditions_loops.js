@@ -103,3 +103,34 @@ for (let i = 1; i < 6; i++) {
     }
     console.log(s);
 }
+
+//combinations of elements
+/*exemple any given arr*/
+let arr = ["blue", "white", "black", "orange"];
+let n = 2;
+ function combine(arr, n) {
+	var i, j, combo, head, tail;
+	if (n > arr.length || n <= 0) { 
+		return [];
+	}
+	if (n == arr.length) {
+		return [arr];
+	}
+	if (n == 1) {
+		combo = [];
+		for (i = 0; i < arr.length; i++) {
+			combo.push([arr[i]]);
+		}
+		return combo;
+	}
+	combo = [];
+	for (i = 0; i < arr.length - n + 1; i++) {
+		head = arr.slice(i, i + 1);
+		tail = combine(arr.slice(i + 1), n - 1);
+		for (j = 0; j < tail.length; j++) {
+			combo.push(head.concat(tail[j]));
+		}
+	}
+	return combo;
+}
+console.log(combine(arr,n));
