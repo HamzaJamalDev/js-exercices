@@ -127,7 +127,13 @@ function Etudiant(nom , module, note){
     this.note   = note ;
 
     this.exists = function(attr){
-        return this[attr] !== undefined ;
+        for (const key in this) {
+            if(key == attr){
+                return true ;
+                break;
+            }
+        }
+        return false ;
     }
 }
 
@@ -138,3 +144,4 @@ let etudiant_1 = new Etudiant(
 );
 
 console.log(etudiant_1.exists("age"));
+console.log(etudiant_1.exists("exists"));
