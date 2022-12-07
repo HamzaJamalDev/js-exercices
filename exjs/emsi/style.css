@@ -1,0 +1,37 @@
+body {
+    background-color: coral;
+}
+
+h1 {
+    color: brown;
+}
+
+div {
+    animation-name: colorchange;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    height: 100px;
+    width: 0px;
+    background-color: red;
+    -webkit-animation-name: colorchange;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-timing-function: linear;
+}
+
+@keyframes colorchange {
+    from {
+        width: 0px;
+    }
+    to {
+        width: 100px;
+    }
+}
+
+@-webkit-keyframes colorchange {
+    from {
+        width: 0px;
+    }
+    to {
+        width: 100px;
+    }
+}
