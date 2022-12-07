@@ -104,17 +104,37 @@ for (let i = 1; i < 101; i++) {
 //     console.log(s);
 // }
 
-let obj = {
-    nom     : "Yasser CHENIK"   ,
-    module  : "JavaScript"      ,
-    note    : 20                ,
-    countAttrs : function(){
-        let i = 0 ;
-        for(let noUse in this){
-            i++;
-        }
-        console.log(i) ;
+// let obj = {
+//     nom     : "Yasser CHENIK"   ,
+//     module  : "JavaScript"      ,
+//     note    : 20                ,
+//     countAttrs : function(){
+//         let i = 0 ;
+//         for(let noUse in this){
+//             i++;
+//         }
+//         console.log(i) ;
+//     }
+// }
+
+// obj.countAttrs();
+
+
+function Etudiant(nom , module, note){
+    
+    this.nom    = nom ;
+    this.module = module ;
+    this.note   = note ;
+
+    this.exists = function(attr){
+        return this[attr] !== undefined ;
     }
 }
 
-obj.countAttrs();
+let etudiant_1 = new Etudiant(
+    "Yasser CHENIK", 
+    "JavaScript", 
+    20
+);
+
+console.log(etudiant_1.exists("age"));
