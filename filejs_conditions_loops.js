@@ -96,10 +96,26 @@ for (let i = 1; i < 101; i++) {
     }
 }*/
 // Exercice 7
-for (let i = 1; i < 6; i++) {
-    let s = "";
-    for (let j = 0; j < i; j++) {
-        s += "*";
+// for (let i = 1; i < 6; i++) {
+//     let s = "";
+//     for (let j = 0; j < i; j++) {
+//         s += "*";
+//     }
+//     console.log(s);
+// }
+
+let obj = {
+    nom     : "Yasser CHENIK"   ,
+    module  : "JavaScript"      ,
+    note    : 20                
+};
+
+let countAttrs = (obj)=>{
+    let i = 0 ;
+    for(let noUse in obj){
+        i++;
     }
-    console.log(s);
+    console.log(i) ;
 }
+
+countAttrs(obj);
