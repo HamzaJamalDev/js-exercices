@@ -30,3 +30,35 @@ function Dernier_Elements(tab, n) {
 }
 
 Dernier_Elements(tab, n);
+
+// Exercice 5
+function combine(arr, n) {
+    let i, j, combo, head, tail;
+    if (n > arr.length || n <= 0) {
+        return [];
+    }
+    if (n == arr.length) {
+        return [arr];
+    }
+    if (n == 1) {
+        combo = [];
+        for (i = 0; i < arr.length; i++) {
+            combo.push([arr[i]]);
+        }
+        return combo;
+    }
+    combo = [];
+    for (i = 0; i < arr.length - n + 1; i++) {
+        head = arr.slice(i, i + 1);
+        tail = combine(arr.slice(i + 1), n - 1);
+        for (j = 0; j < tail.length; j++) {
+            combo.push(head.concat(tail[j]));
+        }
+    }
+    return combo;
+}
+
+/*exemple any given arr*/
+let arr = ["blue", "white", "black", "rain"];
+let num = 2;
+console.log(combine(arr, n));
