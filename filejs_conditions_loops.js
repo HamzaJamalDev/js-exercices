@@ -107,15 +107,14 @@ for (let i = 1; i < 101; i++) {
 let obj = {
     nom     : "Yasser CHENIK"   ,
     module  : "JavaScript"      ,
-    note    : 20                
-};
-
-let countAttrs = (obj)=>{
-    let i = 0 ;
-    for(let noUse in obj){
-        i++;
+    note    : 20                ,
+    countAttrs : function(){
+        let i = 0 ;
+        for(let noUse in this){
+            i++;
+        }
+        console.log(i) ;
     }
-    console.log(i) ;
 }
 
-countAttrs(obj);
+obj.countAttrs();
