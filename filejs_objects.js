@@ -5,7 +5,7 @@ let etudiant_1 = {
     age: 18
 };
 
-etudiant_1.count = function(){
+etudiant_1.count = function () {
     return Object.keys(this).length;
 }
 
@@ -26,6 +26,22 @@ Personne.prototype.exist = function (x) {
     }
     return false;
 };
+
+Personne.prototype.exist2 = function (proto) {
+    let c = 0;
+    for (let p in this) {
+        if (p === proto) {
+            c++;
+            break;
+        }
+    }
+    if (c != 0) return true;
+    else return false;
+};
+
+let othmane = new Personne(['badaoui', 'othmane'], 20, 'badaoui.othmane@emsi.ma');
+othmane.note = 20;
+console.log(othmane.exist2("note"));
 
 let aziz = new Personne(['aziz', 'ahmed'], 21, 'aziz.ahmed@emsi.ma');
 console.log(aziz.exist('mail'));
