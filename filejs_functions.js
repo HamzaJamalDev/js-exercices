@@ -1,4 +1,27 @@
-//Exercice 5
+// Exercice 2
+function Max_Min(N1, N2, N3, N4, N5) {
+    console.log("Max = " + Math.max(N1, N2, N3, N4, N5));
+    console.log("Min = " + Math.min(N1, N2, N3, N4, N5));
+}
+
+Max_Min(prompt("Entrez Nombre 1 :"), prompt("Entrez Nombre 2 :"), prompt("Entrez Nombre 3 :"), prompt("Entrez Nombre 4 :"),
+    prompt("Entrez Nombre 5 :"));
+
+// Exercice 4
+function unique(chaine) {
+    for (let i = 0; i < chaine.length; i++) {
+        let c = chaine.charAt(i);
+        if (chaine.indexOf(c) == i && chaine.indexOf(c, i + 1) == -1) {
+            return c;
+        }
+    }
+    return "";
+}
+
+let chaine = prompt("Chaine :");
+console.log(unique(chaine));
+
+// Exercice 5
 let MatrixUnitaire= function(n){
     let s = ""
     for(let i = 0; i < n; i++)
