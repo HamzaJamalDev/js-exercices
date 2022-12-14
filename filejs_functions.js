@@ -1,3 +1,16 @@
+// Exercice 1
+function prime(n) {
+    for (let i = 2; i <= n / 2; i++) {
+        if (n % i === 0) {
+            return false;
+        }
+    }
+    return true;
+}
+
+n = parseInt(prompt("Entrez un nombre", 1));
+console.log(prime(n));
+
 // Exercice 2
 function Max_Min(N1, N2, N3, N4, N5) {
     console.log("Max = " + Math.max(N1, N2, N3, N4, N5));
@@ -8,7 +21,7 @@ Max_Min(prompt("Entrez Nombre 1 :"), prompt("Entrez Nombre 2 :"), prompt("Entrez
     prompt("Entrez Nombre 5 :"));
 
 // Exercice 3
-function compteur(chaine="", lettre="") {
+function compteur(chaine = "", lettre = "") {
     let j = 0;
     for (let i = 0; i < chaine.length; i++) {
         if (chaine.charAt(i) === lettre) {
@@ -51,3 +64,4 @@ let MatrixUnitaire = function (n) {
 }
 
 console.log(MatrixUnitaire(5))
+
