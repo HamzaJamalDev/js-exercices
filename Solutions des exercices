@@ -1,0 +1,33 @@
+//EXERCICE Tableau
+
+//******Question 1****
+//****Nombre premier****
+
+  function Premier(n) {
+    for(var i = 2; i < n; i++)
+      if(n%i == 0) return false;
+     return true;
+  }
+  let n=prompt('veuillez donner un nombre',0);
+  console.log(Premier(n));
+
+
+
+
+ //**********Question 6 :
+ //****Factorielle****//
+ 
+      function factorielle(nbr) 
+  {
+    if (nbr === 0)
+    {
+       return 1;
+    }
+    return nbr * fact(nbr-1);
+  }
+
+  let  n=prompt('veuillez donner un nombre',0);
+  console.log(factorielle(n));
+
+
+
