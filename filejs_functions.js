@@ -20,6 +20,47 @@ function Max_Min(N1, N2, N3, N4, N5) {
 Max_Min(prompt("Entrez Nombre 1 :"), prompt("Entrez Nombre 2 :"), prompt("Entrez Nombre 3 :"), prompt("Entrez Nombre 4 :"),
     prompt("Entrez Nombre 5 :"));
 
+// Exercice 2 (version 2)
+function maxMin(n1, n2, n3, n4, n5) {
+    let min, max;
+    if (n1 > n2 && n1 > n3 && n1 > n4 && n1 > n5) {
+        max = n1
+    }
+    else if (n2 > n3 && n2 > n4 && n2 > n5) {
+        max = n2;
+    } else if (n3 > n4 && n3 > n5) {
+        max = n3;
+    } else if (n4 > n5) {
+        max = n4;
+    } else {
+        max = n5;
+    }
+
+    if (n1 < n2 && n1 < n3 && n1 < n4 && n1 < n5) {
+        min = n1
+    }
+    else if (n2 < n3 && n2 < n4 && n2 < n5) {
+        min = n2;
+    } else if (n3 < n4 && n3 < n5) {
+        min = n3;
+    } else if (n4 < n5) {
+        min = n4;
+    } else {
+        min = n5;
+    }
+
+    console.log("max = " + max);
+    console.log("min = " + min);
+}
+
+let n1 = parseInt(prompt("Entrez un nombre"));
+let n2 = parseInt(prompt("Entrez un nombre"));
+let n3 = parseInt(prompt("Entrez un nombre"));
+let n4 = parseInt(prompt("Entrez un nombre"));
+let n5 = parseInt(prompt("Entrez un nombre"));
+
+maxMin(n1, n2, n3, n4, n5);
+
 // Exercice 3
 function compteur(chaine = "", lettre = "") {
     let j = 0;
