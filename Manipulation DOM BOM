@@ -1,0 +1,28 @@
+//*EXERCICE1**
+
+//***Partie HTML
+
+<body>
+    <script src="objet2.js"></script>
+
+
+    <p id="parag1" class="paragraphs" >
+        lorem ipsum jksnos pkkd jksojd cdnkjs 
+
+    </p>
+    <button id="changeStyle" onclick="ita()">changer style</button>
+    <button id="resetStyle" onclick="norm()"> Reinitialiser style</button>
+</body>
+
+//******
+
+
+document.body.style.color='white';
+document.body.style.backgroundColor='black';
+
+function ita(){
+    document.getElementById('parag1').style.fontStyle='italic';
+}
+function norm(){
+    document.getElementById('parag1').style.fontStyle='normal';
+}
