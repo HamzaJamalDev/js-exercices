@@ -90,17 +90,17 @@ function unique(chaine) {
 }
 
 // Exercice 4 (version 2)
-function uniqueV2(chaine="") {
+function uniqueV2(chaine = "") {
     for (let i = 0; i < chaine.length; i++) {
         let unique = true;
         for (let j = 0; j < chaine.length; j++) {
-            if(chaine.charAt(i) === chaine.charAt(j) && i !== j){
+            if (chaine.charAt(i) === chaine.charAt(j) && i !== j) {
                 unique = false;
                 break;
             }
         }
 
-        if(unique){
+        if (unique) {
             return chaine.charAt(i);
         }
     }
@@ -124,3 +124,18 @@ let MatrixUnitaire = function (n) {
 
 console.log(MatrixUnitaire(5))
 
+// Exercice 5 (version 2)
+console.log((function (n) {
+    let s = "";
+    for (let i = 0; i < n; i++) {
+        for (let j = 0; j < n; j++) {
+            if (i === j) {
+                s += "1";
+            } else {
+                s += "0";
+            }
+        }
+        s += "\n"
+    }
+    return s
+})(parseInt(prompt("Entrez la dimension", 2))));
