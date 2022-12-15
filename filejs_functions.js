@@ -8,20 +8,20 @@ function prime(n) {
     return true;
 }
 
-n = parseInt(prompt("Entrez un nombre", 1));
+let n = parseInt(prompt("Entrez un nombre", 1));
 console.log(prime(n));
 
 // Exercice 2
-function Max_Min(N1, N2, N3, N4, N5) {
-    console.log("Max = " + Math.max(N1, N2, N3, N4, N5));
-    console.log("Min = " + Math.min(N1, N2, N3, N4, N5));
+function maxMin(n1, n2, n3, n4, n5) {
+    console.log("Max = " + Math.max(n1, n2, n3, n4, n5));
+    console.log("Min = " + Math.min(n1, n2, n3, n4, n5));
 }
 
-Max_Min(prompt("Entrez Nombre 1 :"), prompt("Entrez Nombre 2 :"), prompt("Entrez Nombre 3 :"), prompt("Entrez Nombre 4 :"),
-    prompt("Entrez Nombre 5 :"));
+maxMin(prompt("Entrez nombre 1 :"), prompt("Entrez nombre 2 :"), prompt("Entrez nombre 3 :"), prompt("Entrez nombre 4 :"),
+    prompt("Entrez nombre 5 :"));
 
 // Exercice 2 (version 2)
-function maxMin(n1, n2, n3, n4, n5) {
+function maxMinV2(n1, n2, n3, n4, n5) {
     let min, max;
     if (n1 > n2 && n1 > n3 && n1 > n4 && n1 > n5) {
         max = n1
@@ -59,7 +59,7 @@ let n3 = parseInt(prompt("Entrez un nombre"));
 let n4 = parseInt(prompt("Entrez un nombre"));
 let n5 = parseInt(prompt("Entrez un nombre"));
 
-maxMin(n1, n2, n3, n4, n5);
+maxMinV2(n1, n2, n3, n4, n5);
 
 // Exercice 3
 function compteur(chaine = "", lettre = "") {
@@ -71,6 +71,7 @@ function compteur(chaine = "", lettre = "") {
     }
     return j;
 }
+
 let s = "Sofia";
 let l = "f";
 let c = compteur(s, l);
@@ -88,6 +89,9 @@ function unique(chaine) {
     }
     return "";
 }
+
+let chaine = prompt("Chaine :");
+console.log(unique(chaine));
 
 // Exercice 4 (version 2)
 function uniqueV2(chaine = "") {
@@ -107,22 +111,22 @@ function uniqueV2(chaine = "") {
     return "";
 }
 
-let chaine = prompt("Chaine :");
-console.log(uniqueV2(chaine));
+let str = prompt("Entrez une chaine", "");
+console.log(uniqueV2(str));
 
 // Exercice 5
-let MatrixUnitaire = function (n) {
-    let s = ""
+let identity_matrix = function (n) {
+    let s = "";
     for (let i = 0; i < n; i++) {
         for (let i1 = 0; i1 < n; i1++) {
-            s += (i1 === i ? "1" : "0")
+            s += (i1 === i ? "1" : "0");
         }
-        s += "\n"
+        s += "\n";
     }
-    return s
+    return s;
 }
 
-console.log(MatrixUnitaire(5))
+console.log(identity_matrix(5))
 
 // Exercice 5 (version 2)
 console.log((function (n) {
