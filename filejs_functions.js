@@ -89,8 +89,26 @@ function unique(chaine) {
     return "";
 }
 
+// Exercice 4 (version 2)
+function uniqueV2(chaine="") {
+    for (let i = 0; i < chaine.length; i++) {
+        let unique = true;
+        for (let j = 0; j < chaine.length; j++) {
+            if(chaine.charAt(i) === chaine.charAt(j) && i !== j){
+                unique = false;
+                break;
+            }
+        }
+
+        if(unique){
+            return chaine.charAt(i);
+        }
+    }
+    return "";
+}
+
 let chaine = prompt("Chaine :");
-console.log(unique(chaine));
+console.log(uniqueV2(chaine));
 
 // Exercice 5
 let MatrixUnitaire = function (n) {
