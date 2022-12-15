@@ -1,0 +1,32 @@
+//*************EXERCICE OBJET*******
+
+let Etudiant={
+    nom:'Daraaoui',
+    prenom:'Ibtissam',
+    module:'Javascript',
+    note:18,
+
+    affichernom:function(){
+        console.log(this.nom," ",this.prenom," est la proprietaire de l'objet" );
+    },
+
+    chercherpropriete:function(a){
+        for(let propriete in Etudiant){
+            if (a==propriete){console.log("la propriete ",a," existe dans l'objet!");}
+        else{
+            console.log("la propriete ",a," n'existe pas dans l'objet ");
+        }}
+        }
+    };
+
+
+
+
+let compt=0;
+for(let i in Etudiant){
+    compt++;
+}
+console.log("la longeueur de l'objet est : ",compt);
+Etudiant.affichernom();
+let n=prompt("veuillez une propriete à chercher :");
+Etudiant.chercherpropriete(n);
