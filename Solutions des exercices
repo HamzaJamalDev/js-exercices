@@ -1,75 +1,33 @@
 //EXERCICE Tableau
 
-//********Question 2 :
+//******Question 1****
+//****Nombre premier****
 
- let n = prompt("veuillez entrer le nombre souhaité",0);
- function elementtab(tab,n){
- for (let i=0 ; i<n ; i++)
-            {
-              console.log(tab[i]);
+  function Premier(n) {
+    for(var i = 2; i < n; i++)
+      if(n%i == 0) return false;
+     return true;
+  }
+  let n=prompt('veuillez donner un nombre',0);
+  console.log(Premier(n));
 
-            }
-        }
- let tab = [6,8,0,9,0,55,8];
- console.log("les elements du tableau selon le nombre souhaite");
- elementtab(tab,n);
+
+
+
+ //**********Question 6 :
+ //****Factorielle****//
  
- //********Question 3 :
- 
- let n = prompt("veuillez entrer le nombre souhaité",0);
-    function el(tab,n){
-        for (let i = tab.length-1; i >= tab.length-n; i--)
-        {
-        console.log(tab[i]);
-        }
+      function factorielle(nbr) 
+  {
+    if (nbr === 0)
+    {
+       return 1;
     }
-    let tab = [6,8,0,9,0,55,8];
-    console.log("les elements du tableau selon le nombre souhaite");
-    el(tab,n);
-    
- //**********Question 4 :
- 
-    let n = prompt("veuillez entrer valeur souhaité",0);
-       function dichotomie(tab,n){
-            for (let i = tab.length-1; i >= tab.length-n; i--)
-            {
-             if(tab[i]==n){
-                 console.log("la valeur ", n ," existe dans le tableau dans la position :", i+1);
-             }
-             else{
-                console.log(" la valeur ",n," n'existe pas dans le tableau");
-             }
-            }
-        }
-        let tab = [6,8,0,9,0,55,8]; 
-        dichotomie(tab,n);
-        
-  //*******Question 7 :
-  
-        function frequent(tab){
-            let t= new Array();
-            for (let i=0;i<tab.length;i++){
-               let count =0;
-               for (let j=0;j<tab.length;j++){
-                    if (tab[i]==tab[j])
-                    {
-                        count++;
-                       
-                    }      
-               }
-               t=count;
-               for(let k=0;k<t.length;k++){
-                    let max=0;
-                    for(let g=0;g<t.length;g++){
-                        if(t[k]<t[g]){
-                            max=t[k];
-                        }
-                    }console.log("l'element le plus frequent dans le tableau est ",tab[i] ," il est apparu  " ,max," fois");console.log(t);
-               }                   
-            }
-          }
+    return nbr * fact(nbr-1);
+  }
 
-        let tab = [1,9,2,2,2,0];
-        frequent(tab);
+  let  n=prompt('veuillez donner un nombre',0);
+  console.log(factorielle(n));
+
 
 
