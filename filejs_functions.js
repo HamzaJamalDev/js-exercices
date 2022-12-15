@@ -143,3 +143,14 @@ console.log((function (n) {
     }
     return s
 })(parseInt(prompt("Entrez la dimension", 2))));
+
+// Exercice 6
+function fact(n) {
+    if (n === 0 || n === 1) {
+        return 1;
+    }
+    return n * fact(n - 1);
+}
+
+let num = parseInt(prompt("Entrez un nombre", 1));
+console.log(fact(num));
