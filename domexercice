@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p1" class="para1">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente at nisi nostrum nemo perspiciatis dolore. Earum dolores numquam nostrum, molestias in rem excepturi expedita dolor doloribus sapiente repellendus quos ullam!
+
+    </p>
+    <button id="change" onclick='changer();changerbody()'>Changer Style</button>
+
+    <button id="reset" onclick="reset() ; resetbody()">Reinitialiser Style</button>
+
+<script>
+    let ch = document.getElementById('change');
+let re = document.getElementById('reset');
+
+ch.addEventListener( 'click', function changer()
+{
+document.getElementById("p1").style.color = 'white';
+
+}
+);
+
+ch.addEventListener ( 'click', function changerbody()
+{
+    document.getElementById("p1").style.background = 'black';
+}
+);
+
+
+
+re.addEventListener( 'click', function reset()
+{
+    document.getElementById("p1").style.color = 'black';
+
+}
+);
+
+re.addEventListener( 'click', function resetbody()
+{
+    document.getElementById("p1").style.background = 'white';
+
+}
+);
+</script>
+
+</body>
+</html>
