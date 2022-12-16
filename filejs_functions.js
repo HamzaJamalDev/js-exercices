@@ -154,3 +154,28 @@ function fact(n) {
 
 let num = parseInt(prompt("Entrez un nombre", 1));
 console.log(fact(num));
+
+// Exercice 7 (boucles)
+function rangeLoop(a, b) {
+    let s = "";
+    for (let i = a + 1; i < b; i++) {
+        s += i + "-"
+    }
+    return s;
+}
+
+let a = parseInt(prompt("Entrez a"));
+let b = parseInt(prompt("Entrez b"));
+console.log(rangeLoop(a, b));
+
+// Exercice 7 (fonction récursive)
+function rangeRec(x, y) {
+    if (x > y - 2) {
+        return "";
+    }
+    return (x + 1) + "-" + rangeRec(x + 1, y);
+}
+
+let x = parseInt(prompt("Entrez x"));
+let y = parseInt(prompt("Entrez y"));
+console.log(rangeRec(x, y));
