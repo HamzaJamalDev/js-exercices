@@ -1,0 +1,46 @@
+function personne(nom,age){
+    this.nom=nom;
+    this.age=age;
+    
+}
+personne.prototype.exist =function(prop){
+for(let p in this){
+    if(p===prop){
+        return true;
+    }
+}
+    return false;
+}
+
+let p=new personne("lina",21);
+console.log(p.exist("age"));   //dans ce cas va retourner true
+
+
+function etudiant(nom,age,matriculation,notes,modules){
+    personne.call(this,nom,age);
+    this.matriculation=matriculation;
+    this.notes=notes;
+    this.modules=modules;
+    
+}
+
+etudiant.prototype= Object.create(personne.prototype);
+etudiant.prototype.constructor = etudiant;
+
+etudiant.prototype.bonjour=function(){
+    let msg="bonjour " + this.nom + " tu as ";
+    for(let i = 0; i<this.notes.length; i++) {
+        msg += this.notes[i] + "/20 dans " + this.modules[i] + "," ;
+    } 
+    
+   //ou en peut faire 
+   //let msg=`bonjour  ${this.nom} tu as`;
+   //for(let i = 0; i< this.notes.length; i++){
+     //  msg += ` ${this.notes[i]}/20 dans ${this.modules[i]},` ;
+    // }
+ console.log(msg);
+}
+
+let e= new etudiant("lina", 21 ,"3452", [14, 16, 18],["javascript","sql","linux"]);
+e.bonjour()
+
