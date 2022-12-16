@@ -1,5 +1,5 @@
-//Exercice 1
-function PlusGrand(tableau, nombre) {
+// Exercice 1
+function plusGrand(tableau, nombre) {
     let output = [];
     for (let i of tableau) {
         if (i > nombre)
@@ -8,28 +8,46 @@ function PlusGrand(tableau, nombre) {
     return output;
 }
 
-for (let i of PlusGrand([1, 2, 3, 4, 5, 6, 7, 8, 9], 3))
-console.log(i); // Afficher en dehors de la fonction
-
-//Question 2 et 3 :Tableaux
-let tab = [15, 4, 22, 24, 17, 80];
-let n = prompt("Entrer un nombre", 1);
-
-//Question 2
-function Premier_Elements(tab, n) {
-    for (let i = 0; i < n; i++) { console.log(tab[i]); }
+for (let element of plusGrand([1, 2, 3, 4, 5, 6, 7, 8, 9], 3)) {
+    console.log(element); // Afficher en dehors de la fonction
 }
 
-Premier_Elements(tab, n);
-
-//Question 3
-function Dernier_Elements(tab, n) {
-    for (let i = tab.length - n; i < tab.length; i++) {
-        console.log(tab[i]);
+// Exercice 2 et 3
+// Exercice 2
+function premiersNElements(tab = [], n = 1) {
+    let output = [];
+    if (n > tab.length) {
+        output = tab.slice();
+    } else {
+        for (let i = 0; i < n; i++) {
+            output.push(tab[i]);
+        }
     }
+    return output;
 }
 
-Dernier_Elements(tab, n);
+// Exercice 3
+function derniersNElements(tab = [], n = 1) {
+    let output = [];
+    if (n > tab.length) {
+        output = tab.slice();
+    } else {
+        for (let i = tab.length - n; i < tab.length; i++) {
+            output.push(tab[i]);
+        }
+    }
+    return output;
+}
+
+let tab = [15, 4, 22, 24, 17, 80];
+let n = 3;
+
+for (let element of premiersNElements(tab, n)) {
+    console.log(element);
+}
+for (let element of derniersNElements(tab, n)) {
+    console.log(element);
+}
 
 // Exercice 5
 function combine(arr, n) {
@@ -58,7 +76,6 @@ function combine(arr, n) {
     return combo;
 }
 
-/*exemple any given arr*/
 let arr = ["blue", "white", "black", "rain"];
 let num = 2;
-console.log(combine(arr, n));
+console.log(combine(arr, num));

@@ -11,16 +11,15 @@ etudiant_1.count = function () {
 
 console.log(etudiant_1.count());
 
-// Exercice 2 (première partie)
-function Personne(n, a, m) {
-    this.nom = n;
-    this.age = a;
-    this.mail = m;
+// Exercice 4 (première partie)
+function Personne(nom, age) {
+    this.nom = nom;
+    this.age = age;
 }
 
 Personne.prototype.exist = function (x) {
     for (let item in this) {
-        if (item == x) {
+        if (item === x) {
             return true;
         }
     }
@@ -39,9 +38,9 @@ Personne.prototype.exist2 = function (proto) {
     else return false;
 };
 
-let othmane = new Personne(['badaoui', 'othmane'], 20, 'badaoui.othmane@emsi.ma');
+let othmane = new Personne('badaoui othmane', 20);
 othmane.note = 20;
 console.log(othmane.exist2("note"));
 
-let aziz = new Personne(['aziz', 'ahmed'], 21, 'aziz.ahmed@emsi.ma');
-console.log(aziz.exist('mail'));
+let aziz = new Personne('aziz ahmed', 21);
+console.log(aziz.exist('nom'));
