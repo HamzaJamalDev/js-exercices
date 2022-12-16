@@ -179,3 +179,29 @@ function rangeRec(x, y) {
 let x = parseInt(prompt("Entrez x"));
 let y = parseInt(prompt("Entrez y"));
 console.log(rangeRec(x, y));
+
+// Exercice 8 (boucles)
+function powLoop(b, n) {
+    let p = 1;
+    for (let i = 0; i < n; i++) {
+        p *= b;
+    }
+
+    return p;
+}
+
+let b_pow_loop = parseInt(prompt("Entrez la base b"));
+let n_pow_loop = parseInt(prompt("Entrez l'exposant n"));
+console.log(powLoop(b_pow_loop, n_pow_loop));
+
+// Exercice 8 (fonction récursive)
+function powRec(b, n) {
+    if (n === 0) {
+        return 1;
+    }
+    return b * powRec(b, n - 1);
+}
+
+let b_pow_rec = parseInt(prompt("Entrez la base b"));
+let n_pow_rec = parseInt(prompt("Entrez l'exposant n"));
+console.log(powRec(b_pow_rec, n_pow_rec));
