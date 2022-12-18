@@ -1,0 +1,102 @@
+EXERCICE 4 TABLEAUX:
+-----------------------
+let tab=["safaa",11,23,"sara",200];
+let val="hanane";
+function binaire(tab,val)
+{
+    for(let i=0;i<tab.length;i++)
+    {
+        let tab2=tab.slice(i,i+1);
+        for(let j=tab2.length-1;j<tab2.length;j++)
+        {
+            if(tab2[j]===val)
+            return true;
+        }
+    }
+    return false;
+}
+let x=binaire(tab,val);
+console.log(x);
+------------------------------------------------------
+EXERCICE 5 TABLEAUX:
+-----------------------
+let tab=[1,5,6,8,4,4,4,3,7,92,3,4,6,8];
+function tri(tab)
+{
+
+    let tab3=new Array();
+    for(i=0;i<tab.length;i++)
+{
+    tab2=new Array();
+	if(i==0)
+	{
+		tab3=tab.slice(i,i+1);
+	}
+	else
+	{
+		if(tab[i-1]%2==0 && tab[i]%2==0)
+		{
+			tab2=tab3;
+			tab3=new Array();
+			tab2.push(tab[i]);
+			let r=tab2.join("-");
+			tab3.push(r);
+		}
+		if((tab[i-1]%2!=0 && tab[i]%2==0) || (tab[i-1]%2!=0 && tab[i]%2!=0) || (tab[i-1]%2==0 && tab[i]%2!=0))
+		{
+			tab2=tab3;
+			tab3=new Array();
+			tab2.push(tab[i]);
+			let r=tab2.join("");
+			tab3.push(r);
+		}
+		
+	}
+}
+    for(let i of tab3)
+    {
+        console.log(i);
+    }
+   
+}
+let t=tri(tab);
+-------------------------------------------------
+EXERCICE DU BOM
+-------------------
+PARTIE HTML:
+------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/java.js" async></script>
+</head>
+<body>
+   <h1>hehfejfezkfùlzefù</h1>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis, saepe. Nostrum obcaecati nisi, maiores laborum placeat incidunt architecto esse suscipit omnis, sint exercitationem ut, voluptatem rerum neque. Assumenda, itaque porro.</p>
+    <h1>TEXT</h1>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit, voluptate?</p>
+    <button id="changer">Changer style</button>
+    <button id="reinitialiser">Reinitialiser Style</button>
+</body>
+</html>
+---------------------------------------------------------------
+PARTIE JAVASCRIPT:
+-----------------
+let a=document.getElementById('changer');
+let b=document.getElementById('reinitialiser')
+a.addEventListener('click',changer);
+function changer()
+{
+    document.querySelector('body').style.color='white';
+    document.querySelector('body').style.backgroundColor='black';
+}
+b.addEventListener('click',ren);
+function ren()
+{
+    document.querySelector('body').style.color='black';
+    document.querySelector('body').style.backgroundColor='white';
+}
