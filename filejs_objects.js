@@ -9,7 +9,16 @@ etudiant_1.count = function () {
     return Object.keys(this).length;
 }
 
-console.log(etudiant_1.count());
+etudiant_1.countV2 = function (){
+    let cmp = 0;
+    for(let _ in this){
+        cmp++;
+    }
+    return cmp;
+}
+
+console.log(etudiant_1.count()); // première méthode (ça donne 5)
+console.log(etudiant_1.countV2()); // deuxième méthode (ça donne 5)
 
 // Exercice 4
 function Personne(nom, age) {
