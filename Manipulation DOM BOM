@@ -26,3 +26,32 @@ function ita(){
 function norm(){
     document.getElementById('parag1').style.fontStyle='normal';
 }
+
+
+
+//******Exercice2
+
+//Partie HTML
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="obj.js"></script>
+    <p id="para1" class="paragraphs" >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. 
+         <a id="changeBackgroud" onmouseover="mouseover()" href="#"> www.emsi.ma</a>
+         Lorem ipsum dolor sit amet,Integer <a id="changeBackgroud" onmouseover="mouseover()" href="#"> www.emsi.ma</a>tortor tellus, aliquam faucibus, convallis id, congue eu.
+
+    </p>
+</body>
+</html>
+
+
+//Fonction javascript
+function mouseover(){
+    document.getElementById('para1').style.fontWeight='bold';
+}
