@@ -132,3 +132,43 @@ Etudiant.prototype.bonjour = function () {
 
 let e = new Etudiant("lina", 21, "3452", [14, 16, 18], ["JavaScript", "SQL", "Linux"]);
 e.bonjour();
+//Exe 5 
+
+
+function Livre(id, titre, auteur) {
+  this.id = id;
+  this.titre = titre;
+  this.auteur = auteur;
+}
+function Bibliotheque(nom, emplacement, livres) {
+  this.nom = nom;
+  this.emplacement = emplacement;
+  this.livres = livres;
+}
+
+let Livres = [
+  new Livre(4264, "Python Crash Course", "Eric Matthes"),
+  new Livre(1520, "Algorithms (4th Edition)", "Kevin Wayne"),
+  new Livre(1254, "Cracking the Coding Interview", "Gayle Laakmann McDowell")
+];
+
+let biblio = new Bibliotheque("biblioUne", "C:/User/oussama/Documents", Livres);
+
+let trier = (prop) => {
+  console.table(
+    biblio.livres.sort((a, b) => {
+      if (a[prop] < b[prop]) {
+        //
+        return -1;
+      } else {
+        return 1;
+      }
+    })
+  );
+};
+
+Bibliotheque.prototype.trierBiblio = trier;
+
+biblio.trierBiblio("id");
+biblio.trierBiblio("titre");
+biblio.trierBiblio("auteur");
