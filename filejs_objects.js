@@ -44,6 +44,29 @@ etudiant_2.getProps = function () {
 
 console.log(etudiant_2.getProps());
 
+// Exercice 3
+let etudiant_3 = {
+    nom: "fatima aziz",
+    module: "JavaScript",
+    note: 19,
+    message: function () {
+        console.log(`bonjour ${this.nom} tu as ${this.note}/20 à ${this.module}`);
+    },
+    inverser: function () {
+        let obj = {};
+        for (const prop in this) {
+            let value = this[prop];
+
+            if (typeof (value) !== "function" && typeof (value) !== "object") {
+                obj[this[prop]] = prop;
+            }
+        }
+        return obj;
+    }
+};
+
+console.log(etudiant_3.inverser());
+
 // Exercice 4
 function Personne(nom, age) {
     this.nom = nom;
