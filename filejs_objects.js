@@ -9,9 +9,9 @@ etudiant_1.count = function () {
     return Object.keys(this).length;
 }
 
-etudiant_1.countV2 = function (){
+etudiant_1.countV2 = function () {
     let cmp = 0;
-    for(let _ in this){
+    for (let _ in this) {
         cmp++;
     }
     return cmp;
@@ -19,6 +19,30 @@ etudiant_1.countV2 = function (){
 
 console.log(etudiant_1.count()); // première méthode (ça donne 5)
 console.log(etudiant_1.countV2()); // deuxième méthode (ça donne 5)
+
+// Exercice 2
+let etudiant_2 = {
+    nom: "fatima karim",
+    module: "JavaScript",
+    note: 18,
+    message: function () {
+        console.log("bonjour " + this.nom + " tu as " + this.note + "/20 à " + this.module);
+        /* ou bien
+        console.log(`bonjour ${this.nom} tu as ${this.note}/20 à ${this.module}`);
+        */
+    }
+};
+
+etudiant_2.bonus = 2;
+etudiant_2.getProps = function () {
+    let props = [];
+    for (let p in this) {
+        props.push(p);
+    }
+    return props;
+};
+
+console.log(etudiant_2.getProps());
 
 // Exercice 4
 function Personne(nom, age) {
