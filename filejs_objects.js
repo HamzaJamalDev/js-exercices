@@ -132,3 +132,42 @@ Etudiant.prototype.bonjour = function () {
 
 let e = new Etudiant("lina", 21, "3452", [14, 16, 18], ["JavaScript", "SQL", "Linux"]);
 e.bonjour();
+
+// Exercice 5
+function Livre(titre, auteur, id) {
+    this.titre = titre;
+    this.auteur = auteur;
+    this.id = id;
+}
+
+function Bibliotheque(nom, emplacement, livres) {
+    this.nom = nom;
+    this.emplacement = emplacement;
+    this.livres = livres;
+}
+
+Bibliotheque.prototype.trier = function (prop) {
+    this.livres.sort(function (a, b) {
+        if (a[prop] < b[prop]) {
+            return -1;
+        } else if (a[prop] > b[prop]) {
+            return 1;
+        } else {
+            return 0;
+        }
+    });
+}
+
+let l1 = new Livre('Algorithms (4th Edition)', 'Kevin Wayne', 3245);
+let l2 = new Livre('Cracking the Coding Interview', 'Gayle Laakmann McDowell', 1254);
+let l3 = new Livre('Python Crash Course', 'Eric Matthes', 4264);
+
+let bib = new Bibliotheque("Biblio de l'EMSI", "Casa", [l1, l2, l3]);
+
+// tableau avant le tri
+console.table(bib.livres);
+
+bib.trier("id");
+
+// tableau après le tri
+console.table(bib.livres);
