@@ -132,3 +132,5 @@ Etudiant.prototype.bonjour = function () {
 
 let e = new Etudiant("lina", 21, "3452", [14, 16, 18], ["JavaScript", "SQL", "Linux"]);
 e.bonjour();
+
+// Exercice 5
