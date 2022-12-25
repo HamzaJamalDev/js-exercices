@@ -1,0 +1,51 @@
+-----------KAINE CHAIMAA------------
+EXERCICE DUR LES FONCTIONS
+Solutions d'exercices JavaScript
+exercice3-----
+let chaine="abcad";
+soit l="a"
+fonction nombre_occ(chaine,l)
+{
+    soit r=0 ;
+    for(let i=0;i<chaîne.longueur;i++)
+    {
+        si(chaine[i]==l)
+        {
+                r++;
+        }
+    }
+    retourner r ;
+}
+console.log(nombre_occ(chaine,l));
+exercice4----------------
+soit chaine1="abacddec"
+fonction lettre_non_repeted(chaine1)
+{
+    
+    for(let i=0;i<chaine1.length;i++)
+    {
+        r=0 ;
+        for( let j=0;j<chaine1.lettre_non_repeted;j++)
+        {
+            si(chaine1[i]!=chaine1[j] )
+            {
+                si(r!=chaîne1.longueur)
+                {
+                    r++;
+                    Continuez;
+                }
+                autre
+                {
+                    retourner je ;
+                }
+                 
+            }
+            autre
+            {
+                Pause;
+            }
+           
+        }
+    }
+}
+console.log(lettre_non_repeted(chaine1));
