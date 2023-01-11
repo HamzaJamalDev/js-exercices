@@ -1,0 +1,65 @@
+const para = document.getElementById('paragraph')
+
+const buttonStyle = document.querySelector('.changeStyle')
+// const buttonReset = document.querySelector('button:nth-child(2)') /* Il va selectioner le deuxieme elem button dans le ficher file.html*/
+const buttonReset = document.querySelector('.resetStyle')
+console.log(buttonReset)
+
+const ArrayColor = [
+  'blue', 'cyan', 'gold', 'gray', 'green', 'magenta', 'orange', 'red', 'white', 'yellow'
+]
+var counter = 0;
+const MouseOverEvent = () => {
+  para.style.cursor = 'pointer'
+  para.style.backgroundColor = ArrayColor[Math.floor(Math.random() * (ArrayColor.length + 1))]
+  para.style.transition = 'all 2.5s'
+}
+
+const RenderTable = (rows, cols) => {
+  let Tableau = document.createElement('table')
+  Tableau.classList.add(`Tableau${counter}`)
+  Tableau.style.border = '2px solid red'
+  Tableau.style.columnSpan = 1;
+
+  Tableau.innerHTML = ``
+
+
+  for (let i = 0; i < rows; i++) {
+    let row = document.createElement('tr')
+    for (let g = 0; g < cols; g++) {
+      let col = document.createElement('td')
+      col.innerText = "COL"
+      col.style.border = '1px solid red'
+      row.appendChild(col)
+    }
+    Tableau.appendChild(row)
+  }
+  document.querySelector('.tab').appendChild(Tableau)
+  counter++;
+}
+
+const DestroyeTable = (index) => {
+  if (counter < index) {
+    alert('Table invalide')
+  }
+  else {
+    document.querySelector(`.Tableau${index}`).remove();
+  }
+
+}
+
+
+para.addEventListener('mouseover', MouseOverEvent);
+
+buttonStyle.addEventListener('click', () => {
+  let col = +prompt("Veuiller inserer nombre des colones : ");
+  let row = +prompt("Veuiller inserer nombre des lignes : ")
+  RenderTable(row, col)
+
+})
+
+buttonReset.addEventListener('click',()=>{
+  let indexe = +prompt("Veuiller inserer index de Tableau que vous voulez supprimer : ");
+  DestroyeTable(indexe);
+
+})
