@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Ceci est un <b>exemple</b> de paragraphe.</p>
+<a href="#" onmouseover="boldWords()">Changez l'arrière-plan des mots en gras</a>
+
+<script>
+function boldWords() {
+  // Récupère tous les éléments <b> dans le document
+  let boldElements = document.getElementsByTagName("b");
+
+  // Parcours tous les éléments <b>
+  for (let i = 0; i < boldElements.length; i++) {
+    // Change l'arrière-plan de l'élément en cours
+    boldElements[i].style.backgroundColor = "yellow";
+  }
+}
+</script>
+</body>
+</html>
