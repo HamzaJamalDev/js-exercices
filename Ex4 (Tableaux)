@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex4(Tableaux)</title>
+</head>
+<body>
+    
+    <script>
+        
+        function rechercheBinaire(tab, obj) {
+            let debut = 0;
+            let fin = tab.length - 1;
+        
+            while (debut <= fin) {
+                let milieu = debut + ((fin - debut) >> 1);
+                if (tab[milieu] === obj) {
+                    return milieu;
+                } else if (tab[milieu] < obj) {
+                    debut = milieu + 1;
+                } else {
+                    fin = milieu - 1;
+                }
+            }
+            return -1;
+        }
+
+    </script>
+    
+</body>
+</html>
