@@ -48,6 +48,25 @@ for (let element of premiersNElements(tab, n)) {
 for (let element of derniersNElements(tab, n)) {
     console.log(element);
 }
+//Exercice 4
+function binarySearch(arr, value) {
+  let left = 0;
+  let right = arr.length - 1;
+  
+  while (left <= right) {
+    let mid = Math.floor((left + right) / 2);
+    if (arr[mid] === value) {
+      return mid;
+    } else if (arr[mid] < value) {
+      left = mid + 1;
+    } else {
+      right = mid - 1;
+    }
+  }
+  
+  return -1;
+}
+
 
 // Exercice 5
 function combine(arr, n) {
