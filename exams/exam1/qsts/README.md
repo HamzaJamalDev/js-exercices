@@ -3,32 +3,32 @@
 ## QCM (5 points)
 ### Comprendre et retenir
 1. Qu'est-ce qu'un commit Git?
-    - [ ] Le processus d'enregistrement des modifications dans un dépôt Git.
+    - [x] Le processus d'enregistrement des modifications dans un dépôt Git.
     - [ ] Le processus de transfert des modifications d'une branche vers une autre branche.
     - [ ] Le processus de création d'une nouvelle branche.
     - [ ] Aucune de ces réponses.
 
 2. JavaScript est un langage principalement
-    - [ ] Côté client.
+    - [x] Côté client.
     - [ ] Côté serveur.
     - [ ] Aucune de ces réponses.
 
 3. Quelle est la syntaxe correcte pour écrire un tableau JavaScript?
     - [ ] ```let couleurs = "red", "blue", "green";```
-    - [ ] ```let couleurs = ["red", "blue", "green"];```
+    - [x] ```let couleurs = ["red", "blue", "green"];```
     - [ ] ```let couleurs = "red, blue, green";```
     - [ ] ```let couleurs = (red, blue, green);```
 
 4. Un script PHP commence par
     - [ ]   ```<php```
     - [ ]   ```<link```
-    - [ ]   ```<?php```
+    - [x]   ```<?php```
     - [ ]   ```<script```
 
 ### Appliquer
 1. Quelle est la commande permettant de vérifier l'état du dépôt Git?
     - [ ]   ```git check```
-    - [ ]   ```git status```
+    - [x]   ```git status```
     - [ ]   ```git update```
     - [ ]   ```git report```
 
@@ -43,7 +43,7 @@
 
     - [ ] 30
     - [ ] Erreur
-    - [ ] 40
+    - [x] 40
     - [ ] NaN
 
 3. Quel est le résultat du code JavaScript suivant?
@@ -61,7 +61,7 @@
     ```
 
     - [ ] id
-    - [ ] 1
+    - [x] 1
     - [ ] Python Crash Course
     - [ ] Erreur
 
@@ -79,7 +79,7 @@
 
     - [ ] Une erreur car nous avons utilisé la propriété ```onclick``` au lieu de la propriété ```click```.
     - [ ] "bonsoir", le contenu du ```<p>``` sera modifié.
-    - [ ] "bonjour", le contenu ```<p>``` ne sera pas modifié.
+    - [x] "bonjour", le contenu ```<p>``` ne sera pas modifié.
     - [ ] Une erreur parce que nous avons utilisé ```document``` au lieu de ```window.document```.
 
 ### Analyser
@@ -102,7 +102,7 @@
     - [ ] 3 15
     - [ ] Erreur de syntaxe, nous ne pouvons pas commencer la boucle de -10.
     - [ ] 1 2
-    - [ ] 4 20
+    - [x] 4 20
 
 2. Quel est le résultat du code JavaScript suivant?
     ```javascript
@@ -122,7 +122,7 @@
     - [ ] 1
     - [ ] Erreur de syntaxe
     - [ ] 6
-    - [ ] 11211
+    - [x] 11211
 
 ## QROC (5 points)
 ### Comprendre et retenir
@@ -131,16 +131,16 @@
 ### Appliquer
 1. Remplissez le vide pour créer un commit git avec le message "commit 1".
 
-    ```git (1) ________ "commit 1"```
+    ```git (1) commit -m "commit 1"```
 
 2. Affichez le message "bonjour".
     ```javascript
     let x = 1;
 
     switch (x) {
-        case (1) ________:
+        case (1) x=1:
             console.log("bonjour");
-            (2) ________
+            (2) break;
         default:
             console.log("bonsoir");
     }
@@ -148,16 +148,16 @@
 
 3. Affichez le message "bonjour".
     ```javascript
-    (1) ________ function (message) {
-        console.log(message);} (2) ________;
+    (1) let fun=function (message) {
+        console.log(message);} (2) fun('bonjour');
     ```
 
 4. Remplissez le vide pour changer la couleur de fond du paragraphe en rouge.
     ```html
     <p id="p1">bonjour</p>
     <script>
-        let p1 = document.(1) ________("#p1");
-        p1.(2) ________ = "red";
+        let p1 = document.(1) querySelector("#p1");
+        p1.(2) style.backgroundColor = "red";
     </script>
     ```
 
@@ -172,14 +172,14 @@
     ```
 
     ```javascript
-    let lignes = (1) ________;
+    let lignes = (1) 5;
     let modele = "";
     for (let i = 1; i <= lignes; i++) {
-        for (let j = 1; j < (2) ________; j++) {
-          modele += (3) ________;
+        for (let j = 1; j < (2) ligne-i+1; j++) {
+          modele += (3) " ";
         }
-        for (let k = 1; k < (4) ________; k++) {
-          modele += (5) ________;
+        for (let k = 1; k < (4) 2*i; k++) {
+          modele += (5) "*";
         }
         modele += "\n";
       }
@@ -189,11 +189,11 @@
 2. Répétez le message "bonjour" 3 fois.
     ```javascript
     function strNFois(str, n) {
-        if ((1) ________) {
-            return (2) ________;
+        if ((1) n!==3) {
+            return (2)str ;
         }
 
-      return (3) ________ + " " + (4) ________;
+      return (3) str + " " + (4) str**2;
     }
 
     let message = strNFois("bonjour", 3); //affichez "bonjour bonjour bonjour"
@@ -205,9 +205,9 @@
     let tab = [0, 12, 1, 3, 20];
 
     for (let i = 0; i < tab.length; i++) {
-        if((1) ________){
-            tab.(2) ________;
-            (3) ________;
+        if((1) tab[i]<10){
+            tab.(2) splice(i,1);
+            (3) i--;
         }
     }
 
@@ -223,11 +223,11 @@
                  {"nom":"khadija", "note":20}];
 
     let i = 0;
-    while((1) ________){
-        if((2) ________){
-            notes.(3) ________;
+    while((1) notes.lenght){
+        if((2) notes[i].note<10){
+            notes.(3) splice(i,1);
         } else {
-            (4) ________;
+            (4) i++;
         }
     }
 
@@ -255,11 +255,38 @@
 
     Exemple :
     15 + 30 + 45 = 90
+    //
+    for(int i=0;i<50;i++){
+    if(i%3==0&&i%5==0){
+    i+=i;}
+    }
+    }
+    //
+   
+    
 
 2. Écrivez un programme JavaScript pour séparer les valeurs paires et impaires d'un tableau en deux tableaux (l'ordre n'est pas important).
 
     Exemple :
     [1, -2, 3, 0, -1] -> [1, 3, 0] et [-2, -1]
+    
+    //
+tab1=[1,2,12,7];
+tabpair=[];
+tabimpaire=[];
+function trier(){
+    for(let i=0;i<tab1.lenght;i++){
+        if(i%2==0){
+            tabpair.push(i);
+        }
+        else{
+            tabimpaire.push(i);
+        }
+    }
+}
+console.log(tabpair);
+console.log(tabimpaire);
+   //
 
 ### Analyser
 1. Écrivez un constructeur appelé Chapitre, qui a 3 propriétés :
@@ -279,7 +306,49 @@
     Écrivez les méthodes suivantes :
     - sauterLongsChapitres : ne prend aucun paramètre, ne renvoie rien, et supprime les chapitres longs de plus de 100 pages.
     - trierChapitres : prend un argument (soit "position", soit "nombre_pages"), ne retourne rien, et trie les chapitres par position ou par nombre de pages.
+    
+    ////
+    function Chapitre(nom, nombre_pages, position) {
+    this.nom = nom;
+    this.nombre_pages = nombre_pages;
+    this.position = position;
+}
 
+Chapitre.prototype.chapitreLong = function () {
+if(nombre_pages>100){
+return true;
+}
+else
+return false
+};
+
+ function Livre(id, titre, prix,chapitres) {
+    this.id = id;
+    this.titre = titre;
+    this.prix = prix;
+    this.chapitres=chapitres;
+}
+
+Livre.prototype.sauterLongsChapitres = function () {
+    for (let i = 0; i < this.chapitre.length; i++) {
+        if (this.chapitre[i].nombre_pages > 100) {
+            let chap_supprimes = this.chapitre.splice(i, 1,);
+        }
+    }
+};
+
+Livre.prototype.trierChapitres = function (nombre_pages) {
+    this.Livre.sort(function (a, b) {
+        if (a[nombre_pages] < b[nombre_pages]) {
+            return -1;
+        } else if (a[nombre_pages] > b[nombre_pages]) {
+            return 1;
+        } else {
+            return 0;
+        }
+    });
+};
+///
 2. Écrivez un code PHP pour afficher les titres HTML de h1 à h6 (utiliser une boucle for).
     ```html
     <h1>titre 1</h1>
@@ -288,6 +357,31 @@
     <h4>titre 4</h4>
     <h5>titre 5</h5>
     <h6>titre 6</h6>
+   ///
+   <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h>
+        <?php
+        for ($i = 0; $i < 6; $i++) :
+        ?>
+            <p> Titre<?= $i+1; ?></p>
+        <?php
+        endfor;
+        ?>
+    </h>
+</body>
+
+</html>
+///
     ```
 
 ## Remarques
