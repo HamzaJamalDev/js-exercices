@@ -364,7 +364,7 @@ chapitre.prototype.chapitrelong = function(){
     return this.nombre_de_page > 100 ; } 
 
 function livre(id, title, prix, chapitre){
-this.id=idd;
+this.id=id;
 this.title=title;
 this.prix=prix;
 this.chapitre=chapitre;
