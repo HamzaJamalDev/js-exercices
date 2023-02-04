@@ -318,7 +318,22 @@
 
     Réponses :
     ```javascript
-        //code
+        function separe(array) {
+    const tab1 = [];
+    const tab2 = [];
+    for (let value of array) {
+      if (value % 2 === 0) {
+        tab1.push(value);
+      } else {
+        tab2.push(value);
+      }
+    }
+    return [tab1 , tab2];
+  }
+  let input=[1, -2, 3, 0, -1];
+  let result=separe(input);
+  console.log(result);
+ 
     ```
 
 ### Analyser
