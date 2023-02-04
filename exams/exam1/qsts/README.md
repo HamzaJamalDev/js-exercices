@@ -255,11 +255,33 @@
 
     Exemple :
     15 + 30 + 45 = 90
+    //reponse:
+    let som=0;
+for(let i=1;i<50;i++){
+    
+    if(i%3===0 && i%5===0){
+        
+        som+=i;
+    }
+}
+console.log(som);
 
 2. Écrivez un programme JavaScript pour séparer les valeurs paires et impaires d'un tableau en deux tableaux (l'ordre n'est pas important).
 
     Exemple :
     [1, -2, 3, 0, -1] -> [1, 3, 0] et [-2, -1]
+    //reponse
+    let tab=[1,-2,3,0,4];
+    let tablepair=[];
+    let tableimpair=[];
+    for(let i=0;i<tab.length;i++){
+    if(tab[i]%2===0){
+        console.log(tablepair.push([tab[i]]));
+    }
+    else{
+       console.log(tableimpair.push([tab[i]]));
+    }
+    }
 
 ### Analyser
 1. Écrivez un constructeur appelé Chapitre, qui a 3 propriétés :
@@ -279,6 +301,51 @@
     Écrivez les méthodes suivantes :
     - sauterLongsChapitres : ne prend aucun paramètre, ne renvoie rien, et supprime les chapitres longs de plus de 100 pages.
     - trierChapitres : prend un argument (soit "position", soit "nombre_pages"), ne retourne rien, et trie les chapitres par position ou par nombre de pages.
+    - //reponse:
+    - function Chapitre(nom,nombre_pages,position){
+    this.nom=nom;
+    this.nombre_pages=nombre_pages;
+    this.position=position;
+}
+Chapitre.prototype.chapitreLong=function(){
+    if(this.nombre_pages>100){
+        return true;
+    }
+    else{return false;}
+}
+
+function Livre(id,titre,prix,chapitres){
+    this.id=id;
+    this.titre=titre;
+    this.prix=prix;
+    this.chapitres=chapitres;
+}
+Livre.prototype.trierChapitre=function(prop){
+    this.chapitres.sort(function(a,b){
+        if(a[prop]<b[prop]){
+            return -1;
+        }
+        else if(a[prop]>b[prop]){
+            return 1;
+        }
+        else{return 0;}
+    })
+}
+Livre.protocole.sauterLongsChapitres=function(){
+    if(nombre_pages>100){
+        let elem=this.chapitreLong.splice(i,1);
+    }
+}
+let p1=new Chapitre("dj",18,5);
+let p2=new Chapitre("dj",14,5);
+let p3=new Chapitre("dj",100,5);
+console.log(p1.chapitreLong('nombre_pages'));
+console.log(p2.chapitreLong('nombre_pages'));
+console.log(p3.chapitreLong('nombre_pages'));
+
+let l=new Livre(54,"dee",154,[45,14,58]);
+console.log(l.trierChapitre("nombre_pages"));
+console.log(l.sauterLongsChapitres);
 
 2. Écrivez un code PHP pour afficher les titres HTML de h1 à h6 (utiliser une boucle for).
     ```html
@@ -288,6 +355,16 @@
     <h4>titre 4</h4>
     <h5>titre 5</h5>
     <h6>titre 6</h6>
+//reponse:
+ <h>
+    <?php
+    for($i=1;$i<=7;i++):
+    ?>
+    <p>titre<?=$i+1;?></p>
+    <?php
+    endfor;
+    ?>
+    </h>
     ```
 
 ## Remarques
