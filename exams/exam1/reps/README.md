@@ -306,9 +306,13 @@
     15 + 30 + 45 = 90
 
     Réponses :
-    ```javascript
-        //code
-    ```
+    let somme=0;
+		for(let i=0;i<50;i++){
+			if(i%3===0 && i%5===0){
+				somme+= i;
+			}
+		}
+		console.log(somme);
 
 2. Écrivez un programme JavaScript pour séparer les valeurs paires et impaires d'un tableau en deux tableaux (l'ordre n'est pas important).
 
@@ -317,9 +321,18 @@
 
 
     Réponses :
-    ```javascript
-        //code
-    ```
+    let tab=[-1,2,3,4,0,1];
+		let paire=[];
+		let impaire=[];
+		for(let i=0;i<tab.length;i++){
+			if(tab[i]%2===0){
+				paire.push(tab[i]);
+			}else{
+				impaire.push(tab[i]);
+			}
+		}
+		console.log(paire);
+		console.log(impaire);
 
 ### Analyser
 1. Écrivez un constructeur appelé Chapitre, qui a 3 propriétés :
@@ -341,9 +354,45 @@
     - trierChapitres : prend un argument (soit "position", soit "nombre_pages"), ne retourne rien, et trie les chapitres par position ou par nombre de pages.
 
     Réponses :
-    ```javascript
-        //code
-    ```
+    function Chapitre(nom,nombre_pages,position){
+			this.nom=nom;
+			this.nombre_pages=nombre_pages;
+			this.position=position;
+			//methode: 
+			this.chapitreLong=function(){
+				if(this.nombre_pages>100){
+					return true;
+				}else{
+					return false;
+				}
+			};
+		}
+		function Livre(id,titre,prix,chapitres=[]){
+			this.id=id;
+			this.titre=titre;
+			this.prix=prix;
+			this.chapitres=chapitres;
+			//methode 1:
+			this.sauterLongsChapitres=function(){
+				for(let i=0;i<this.chapitres.length;i++){
+					if(this.chapitres[i].nombre_pages>100){
+						chapitres.splice(i,1,);
+					}
+				}
+			};
+			//methode 2=> par position:
+			this.trierChapitres=function(position){
+				this.chapitres.sort(function (a,b){
+					if (a[position]<b[position]){
+						return -1;
+					}else if (a[position]>b[position]){
+						return 1;
+					}else{
+						return 0;
+					}
+				});
+			};
+		}
 
 2. Écrivez un code PHP pour afficher les titres HTML de h1 à h6 (utiliser une boucle for).
     ```html
@@ -358,7 +407,11 @@
     Réponses :
     ```php
     <?php
-        //code
+        for($i=1; $i<7; $i++)
+        {
+           
+            echo "<h$i> Titre $i <br>";
+        }
     ?>
     ```
 
