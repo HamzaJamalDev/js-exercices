@@ -306,9 +306,13 @@
     15 + 30 + 45 = 90
 
     Réponses :
-    ```javascript
-        //code
-    ```
+    let sum=0;
+		for(let x=1;x<=50;x++){
+			if( x%3==0 && x%5==0){
+				sum+= x;
+			}
+		}
+		console.log(sum);
 
 2. Écrivez un programme JavaScript pour séparer les valeurs paires et impaires d'un tableau en deux tableaux (l'ordre n'est pas important).
 
@@ -317,9 +321,18 @@
 
 
     Réponses :
-    ```javascript
-        //code
-    ```
+    let tableau=[4,6,1,2,7,3];
+		let Tabl_p=[];
+		let Tabl_i=[];
+		for(let x=0;x<tableau.length;x++){
+			if(tableau[x]%2===0){
+				Tabl_p.push(tableau[x]);
+			}else{
+				Tabl_i.push(tableau[x]);
+			}
+		}
+		console.log(Tabl_p);
+		console.log(Tabl_i);
 
 ### Analyser
 1. Écrivez un constructeur appelé Chapitre, qui a 3 propriétés :
@@ -341,9 +354,44 @@
     - trierChapitres : prend un argument (soit "position", soit "nombre_pages"), ne retourne rien, et trie les chapitres par position ou par nombre de pages.
 
     Réponses :
-    ```javascript
-        //code
-    ```
+    function chapitre(n,n_p,p){
+			this.nom=n;
+			this.nombre_pages=n_p;
+			this.position=p;
+			//methode: 
+			this.chapitreLong=function(){
+				if(this.nombre_pages>100){
+					return true;
+				}else{
+					return false;
+				}
+			};
+		}
+		function Livre(i,t,p,chapitres){
+			this.id=i;
+			this.titre=t;
+			this.prix=p;
+			this.chapitres=chapitres;
+			//methode 1:
+			this.sauterLongsChapitres=function(){
+				for(let x=0;x<this.chapitres.length;x++){
+					if(this.chapitres[x].nombre_pages>100){
+						chapitres.splice(x,1,);
+					}
+				}
+			};
+			this.trierChapitres=function(nombre_pages){
+				this.chapitres.sort(function (a,b){
+					if (a[nombre_pages]<b[nombre_pages]){
+						return -1;
+					}else if (a[nombre_pages]>b[nombre_pages]){
+						return 1;
+					}else{
+						return 0;
+					}
+				});
+			};
+		}
 
 2. Écrivez un code PHP pour afficher les titres HTML de h1 à h6 (utiliser une boucle for).
     ```html
@@ -358,7 +406,11 @@
     Réponses :
     ```php
     <?php
-        //code
+        for($i=1;$i<7;$i++)
+        {
+           
+            echo "<h$i> titre $i <br>";
+        }
     ?>
     ```
 
