@@ -307,7 +307,14 @@
 
     Réponses :
     ```javascript
-        //code
+        let sum = 0;
+    for (let i = 0; i < 50; i++) {
+      if (i % 3 === 0 || i % 5 === 0) {
+        sum += i;
+      }
+    }
+ console.log(sum);
+ //affichage 543
     ```
 
 2. Écrivez un programme JavaScript pour séparer les valeurs paires et impaires d'un tableau en deux tableaux (l'ordre n'est pas important).
