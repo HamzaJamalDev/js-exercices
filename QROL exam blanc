@@ -52,10 +52,10 @@ somme =0;
 
  for (let i=0;i<=4;i++){
 
-    if(tab[i]<0){
+    if(tab[i]%2==0){
         tab2.push(tab[i]);
     }
-    if(tab[i]>=0){
+    else{
         tab3.push(tab[i]);
     }
 
