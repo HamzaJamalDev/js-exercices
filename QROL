@@ -1,0 +1,90 @@
+//Appliquer
+//1-Écrivez un programme JavaScript pour calculer la somme des multiples de 3 et 5 inférieurs à 50 (utiliser une boucle for).
+let sum = 0;
+for (let i = 0; i < 50; i++) {
+  if (i % 3 === 0 || i % 5 === 0) {
+    sum += i;
+  }
+}
+console.log(sum);
+
+//2-Écrivez un programme JavaScript pour séparer les valeurs paires et impaires d'un tableau en deux tableaux (l'ordre n'est pas important).
+function spr(arr) {
+    let pair = [];
+    let impair = [];
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i] % 2 === 0) {
+        pair[pair.length] = arr[i];
+      } else {
+        impair[impair.length] = arr[i];
+      }
+    }
+    return {pair, impair};
+  }
+  
+  let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  let separer = spr(numbers);
+  console.log(separer);
+
+//analyser:
+
+//analyser 1_
+function chapitre(n,n_p,p){
+this.nom=n;
+this.nmbr_p=n_p;
+this.position=p;
+
+this.chapitreLong=function(){
+if(this.nmbr_p>100){
+return true;
+}else{
+return false;
+}
+};
+}
+function Livre(i,t,p,chapitres){
+this.id=i;
+this.titre=t;
+this.prix=p;
+this.chapitres=chapitres;
+
+this.sauterLongsChapitres=function(){
+for(let x=0;x<this.chapitres.length;x++){
+if(this.chapitres[x].nmbr_p>100){
+chapitres.splice(x,1,);
+}
+}
+};
+
+this.trierChapitres=function(nmbr_p){
+this.chapitres.sort(function (a,b){
+if (a[nmbr_p]<b[nmbr_p]){
+return -1;
+}else if (a[nmbr_p]>b[nmbr_p]){
+return 1;
+}else{
+return 0;
+}
+});
+};
+}
+
+let monChapitre1= new chapitre("Chap1",101,2);
+let monChapitre2= new chapitre("Chap1",102,151);
+let monChapitre3= new chapitre("Chap1",103,12);
+let monChapitre4= new chapitre("Chap1",104,52);
+
+let chapitres=[monChapitre1,monChapitre2,monChapitre3,monChapitre4];
+
+let monLivre1= new Livre(45,"Liv1",3,chapitres);
+let monLivre2= new Livre(66,"Liv1",212,chapitres);
+console.log(monChapitre1.chapitreLong());
+monLivre1.sauterLongsChapitres();
+monLivre1.trierChapitres("position");
+console.table(monLivre1.chapitres);
+  
+
+//2-
+for ($i = 1; $i <= 6; $i++) {
+    echo "<h$i>Titre h$i</h$i>";
+}
