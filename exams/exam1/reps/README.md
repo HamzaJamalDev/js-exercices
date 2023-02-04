@@ -318,7 +318,21 @@
 
     Réponses :
     ```javascript
-        //code
+        function separe(array) {
+    const t1 = [];
+    const t2 = [];
+    for (let value of array) {
+      if (value % 2 === 0) {
+        t1.push(value);
+      } else {
+        t2.push(value);
+      }
+    }
+    return [t1 , t2];
+  }
+  let array=[1, -2, 3, 0, -1];
+  let result=separe(array);
+  console.log(result);
     ```
 
 ### Analyser
