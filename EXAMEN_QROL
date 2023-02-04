@@ -1,0 +1,111 @@
+//exercice1//
+function Somme()[C
+{let somme=0;
+for(let i=0;i<50;i++)
+{
+	if(i%3==0 ||i%5==0)
+		{
+			somme+=i;
+		}
+}
+console.log(somme);
+}
+Somme();
+//EXERCICE2//
+let TAB=[1,2,3,4,8,9,0,7,-2,-55];
+function PAIRE_IMPAIRE(TAB)
+{let TAB_PAIRE=[];
+let TAB_IMPAIRE=[];
+for(let i=0;i<TAB.length;i++)
+{
+if(TAB[i]%2==0)
+{
+	TAB_PAIRE.push(TAB[i]);
+}
+else
+
+{	TAB_IMPAIRE.push(TAB[i]);
+}
+}
+console.log("les elements paire sont:");
+for(let i=0;i<TAB_PAIRE.length;i++)
+{	console.log(TAB_PAIRE[i]);
+}
+console.log("LES ELEMENTS IAIRE SONT:");
+for(let i=0;i<TAB_IMAPIRE.length;i++)
+{
+	console.log(TAB_IMPAIRE[i]);
+}
+}
+PAIRE_IMAPAIRE(TAB);
+//EXERCICE3//
+function Chapitre(n,nbr,pos)
+{
+[D[D[D[D[	this.nom=n;
+	this.nombre_page=nbr;
+	this.position=pos;
+}
+Chapitre.prototype.chapitreLong=function()
+{
+	if(this.nombre_page>100)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
+function Livre(id,titre,prix,chapitre)
+{
+	this.id=id;
+	this.titre=titre;
+	this.prix=prix;
+	this.chapitres=chapitre;
+}
+[D[D[D[D[D[D[DLivre.prototype.sauterLongschapitres=function()
+{
+	for(let i=0;i<this.chapitres.length;i++)
+	{
+		if(this.chapitres[i]>100)
+		{
+			this.chapitres.splice(i,1);
+		}
+	}
+}
+Livre.prototype.trierchapitres=function()
+{	this.chapitres.sort(function(a,b)
+	{
+		if(a[prop[A[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cprop)[B[D[D[D[D[D[B[D[D[B[D[D[D[D[D[D[D[D[D[D[D[D[D]<b[prop])
+		{
+			return -1;
+		}
+		else if(a[prop]>b[prop])
+		{
+			return 1;
+		}
+		else
+
+[A		{
+			return 0;
+		}
+	}
+}
+//EXERCICE4//
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<?php
+		for(let i=1;i<7;i++)
+		{
+			echo:"<h$i>TITRE $i</h$i>";
+		}
+	?>
+</body>
+</html>
