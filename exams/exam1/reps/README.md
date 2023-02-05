@@ -313,7 +313,7 @@
 2. Écrivez un programme JavaScript pour séparer les valeurs paires et impaires d'un tableau en deux tableaux (l'ordre n'est pas important).
 
     Exemple :
-    [1, -2, 3, 0, -1] -> [1, 3, 0] et [-2, -1]
+    [1, -2, 3, 0, -1] -> [1, 3, -1] et [-2, 0]
 
 
     Réponses :
