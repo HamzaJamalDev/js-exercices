@@ -1,0 +1,84 @@
+//Appliquer
+//Écrivez un programme JavaScript pour calculer la somme des multiples de 3 et 5 inférieurs à 50
+let somme = 0;
+for(let i=0 ; i<50 ; i++){
+    if(i%3==0 && i%5==0) somme+=i; 
+}
+console.log(somme);
+
+//Écrivez un programme JavaScript pour séparer les valeurs paires et impaires d'un tableau en deux tableaux
+let tab = [1,-2,3,0,-1];
+let tabpair = [];
+let tabimpair = [];
+for(let i=0 ;i<tab.length; i++){
+    if(tab[i]%2==0) tabpair.push(tab[i]);
+    else if(tab[i]%2!=0) tabimpair.push(tab[i]);
+}
+console.log(tabpair);
+console.log(tabimpair);
+
+//Analyser
+//Chapitre
+function Chapitre(n,np,p){
+    this.nom = n;
+    this.nombre_pages = np;
+    this.position = p;
+}
+
+Chapitre.prototype.ChapitreLong = function (){
+    return this.nombre_pages>100;
+};
+
+let e = new Chapitre('Algebre',201,1);
+console.log(e.ChapitreLong());
+
+//Livre
+function Livre(id,titre,prix,chapitre = []){
+    this.id = id;
+    this.titre = titre;
+    this.prix = prix;
+    this.chapitres = chapitre;
+}
+Livre.prototype.SauterLongChapitres = function (){
+    for (let i = 0; i < this.chapitres.length; i++) {
+        if (this.chapitres[i].nombre_pages > 100) {
+             this.chapitres.splice(i,1);
+        }
+    }
+    return this.chapitres;
+};
+Livre.prototype.TrierChapitres = function (p){
+    this.chapitres.sort(p);
+    return this.chapitres;
+};
+
+let l1 = new Livre(1,'maths',250,[ch1,ch2,ch3]);
+console.log(l1.TrierChapitres());
+console.log(l1.SauterLongChapitres());
+
+//Écrivez un code PHP pour afficher les titres HTML de h1 à h6 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>       
+      ul{
+        list-style-type: none;
+      }
+    </style>
+</head>
+<body>
+   <ul>
+    <?php 
+    for($i=1;$i<7;$i++) :
+    ?> 
+    <li> 
+        <h<?=$i;?>><?php echo 'titre'.$i; ?></h<?=$i;?>>
+    </li>
+    <?php endfor;?>
+    </ul>
+</body>
+</html>
