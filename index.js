@@ -7,17 +7,19 @@ function threefive(){
     return s;
 }
 //2
-function intwo(odd=[]){
-    let even=[];
-    for(let i of odd){
-        if(i%2==0){
-            even.push(odd.splice(odd.indexOf(i),1));
-        }
+function intwo(odd){
+    let even = [];
+    for(let i=0; i<odd.length; i++){
+      if(odd[i]%2 == 0){
+        even.push(odd[i]);
+        odd.splice(i,1);
+        i--;
+      }
     }
     return even;
-}
-//aaaaaaaaaaa ca marche pas s'il ya 2 pairs successifs (＞﹏＜)
-let odd=[1,2,3,4,5,6];
+  }
+//fixed :p 
+let odd=[1,20,2,65,12,98,11,77,45,32,145];
 let even=intwo(odd);
 console.log(`les impairs : ${odd}\nles pairs : ${even}`);
 //3
@@ -37,8 +39,11 @@ function livre(id, titre="", prix, chapitres=[]){
 }
 livre.prototype.sauterLongsChapitres = function (){
     let x = this.chapitres;
-    for(let i of x){
-        if(i.nombres_pages>100) x.splice(x.indexOf(i),1);
+    for(let i=0; i<x.length;i++){
+        if(x[i].chapitreLong()===true){
+            x.splice(i,1);
+            i--;
+        }
     }
 }
 livre.prototype.trierChapitres = function (x){
@@ -49,13 +54,12 @@ livre.prototype.trierChapitres = function (x){
             return 0;
     });
 }
-
-let a = new chapitre("stranger", 90 , 5);
-let b = new chapitre("bankai", 1001 , 6);
-let x = new chapitre("dark magician",200 , 4);
-let y = new chapitre("blue-eyes", 40 , 1);
-let z = new livre(1, "bungo stray dogs", 80, [x,y,a,b]);
+let arr=[new chapitre("stranger", 90 , 5), new chapitre("bankai", 1001 , 6), new chapitre("dark magician",200 , 4), new chapitre("blue-eyes", 40 , 1)];
+let z = new livre(1, "bungo stray dogs", 80, arr);
 console.table(z.chapitres);
 console.table(z.trierChapitres("position"));
+console.table(z.chapitres);
+console.table(z.trierChapitres("nombres_pages"));
+console.table(z.chapitres);
 z.sauterLongsChapitres();
 console.table(z.chapitres);
