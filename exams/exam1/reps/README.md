@@ -307,7 +307,14 @@
 
     Réponses :
     ```javascript
-        //code
+        //exercice 2
+let sum = 0;
+    for (let i = 0; i < 50; i++) {
+      if (i % 3 === 0 || i % 5 === 0) {
+        sum += i;
+      }
+    }
+ console.log(sum);
     ```
 
 2. Écrivez un programme JavaScript pour séparer les valeurs paires et impaires d'un tableau en deux tableaux (l'ordre n'est pas important).
@@ -357,7 +364,48 @@
 
     Réponses :
     ```javascript
-        //code
+        function Chapitre(nom, nombre_pages, position) {
+    this.nom = nom;
+    this.nombre_pages = nombre_pages;
+    this.position = position;
+  
+  
+  }
+  Chapitre.prototype.chapitreLong = function(){
+    if(this.nombre_pages>100){
+        return true;
+    }else{
+        return false;
+    }
+}
+  
+  // Livre Constructor
+  function Livre(id, titre, prix, chapitres) {
+    this.id = id;
+    this.titre = titre;
+    this.prix = prix;
+    this.chapitres = chapitres;
+  
+  }
+  
+  Livre.prototype.sauterLongsChapitres = function () {
+    for (let i = 0; i < this.Chapitre.length; i++) {
+        if (this.Chapitre[i].nombre_pages > 100) {
+            let chap_supprimes = this.chapitre.splice(i, 1,);
+        }
+    }
+};
+  Livre.prototype.trierChapitres = function (nombre_pages) {
+    this.Livre.sort(function (a, b) {
+        if (a[nombre_pages] < b[nombre_pages]) {
+            return -1;
+        } else if (a[nombre_pages] > b[nombre_pages]) {
+            return 1;
+        } else {
+            return 0;
+        }
+    });
+};
     ```
 
 2. Écrivez un code PHP pour afficher les titres HTML de h1 à h6 (utiliser une boucle for).
@@ -372,9 +420,12 @@
 
     Réponses :
     ```php
-    <?php
-        //code
-    ?>
+    
+        <?php
+for ($i = 1; $i <= 6; $i++) {
+    echo "<h$i>titre $i</h$i>";
+}
+?>
     ```
 
 ## Remarques
