@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//exercice  1:
+let s = 0;
+
+for (let i = 0; i < 50; i++) {
+  if (i % 3 == 0 && i % 5 == 0) {
+    s += i;
+  }
+}
+console.log(s);
+//exercice  2:
+const array = [1, -2, 3, 0, -1];
+
+const even = [];
+const odd = [];
+
+for (let i = 0; i < array.length; i++) {
+  if (array[i] % 2 === 0) {
+    even.push(array[i]);
+  } else {
+    odd.push(array[i]);
+  }
+}
+console.log(even);
+console.log(odd);
+//Analyze :
+function Chapitre(nom, nombre_pages, position) {
+  this.nom = nom;
+  this.nombre_pages = nombre_pages;
+  this.position = position;
+
+  this.chapitreLong = function() {
+    return this.nombre_pages > 100;
+  };
+}
+
+function Livre(id, titre, prix, chapitres) {
+  this.id = id;
+  this.titre = titre;
+  this.prix = prix;
+  this.chapitres = chapitres;
+
+  this.sauterLongsChapitres = function() {
+    this.chapitres = this.chapitres.filter(function(chapitre) {
+      return !chapitre.chapitreLong();
+    });
+  };
+
+  this.trierChapitres = function(critere) {
+    this.chapitres.sort(function(chapitre1, chapitre2) {
+      if (critere === "position") {
+        return chapitre1.position - chapitre2.position;
+      } else if (critere === "nombre_pages") {
+        return chapitre1.nombre_pages - chapitre2.nombre_pages;
+      }
+    });
+  };
+}
+//
+/*<?php
+        for ($i = 1; $i <= 6; $i++) {
+            echo "<h".$i.">Titre de niveau" .$i."</h" .$i. ">";
+        }
+        
+?>*/
+    </script>
+    
+</body>
+</html>
