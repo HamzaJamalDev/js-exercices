@@ -1,0 +1,91 @@
+//AKRAM AIT ABDELOUAHID G2
+//Appliquer
+//QST 1:
+let s = 0;
+for(let i=1; i<=50; i++){
+    if(i%3 == 0 && i%5 == 0){
+        console.log(i);
+        s = s+i;
+    }
+}
+console.log("La somme est: "+s);
+
+//QST 2:
+let tab = [0,16,5,14,18,23,45,46];
+let pair = [];
+let impair = [];
+for(let i=0; i< tab.length ; i++){
+    if(tab[i]%2 == 0 && tab[i]/tab[i] == 1){
+        pair.push(tab[i]);
+    }
+    else{
+        impair.push(tab[i]);
+    }
+}
+console.log(" Les valeurs pair sont: "+pair);
+console.log("Les valeurs impair sont : "+impair);
+
+// Analyse:
+//QST 1:
+
+function Chapitre(n,nbrP,p){
+    this.nom = n;
+    this.nombre_pages = nbrP;
+    this.position = p;
+}
+Chapitre.prototype.chapitreLong = function(){
+    if(this.nombre_pages > 100){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+let chapitre1 = new Chapitre("Ana",1312,"position 1");
+let chapitre2 = new Chapitre("Baba",666,"position 2");
+let chapitre3 = new Chapitre("Cava",777,"position 3");
+
+
+function Livre(id,titre,prix,chap=[]){
+    this.id = id;
+    this.titre = titre;
+    this.prix = prix;
+    this.chapitres = chap; 
+}
+Livre.prototype.sauterLongsChapitres = function(){
+    for(let i=0; i<this.chapitres.length;i++){
+        if(this.chapitres[i].nombre_pages>100){
+            this.chapitres.splice(i,2);
+        }
+    }
+}
+let livre1 = new Livre(1,"NOISY",80,[chap1,chap2,chap3]);
+livre1.sauterLongsChapitres();
+console.log(livre1);
+
+Livre.prototype.trierChapitres = function(prop){
+    this.chapitres.sort(function(a,b){
+        if(a[prop] > b[prop]){
+            return 1;
+        }
+        else if(a[prop] < b[prop]){
+            return -1;
+        }
+        else{
+            return 0;
+        }
+    });
+}
+
+livre1.trierChapitres("nombre_pages");
+console.log(livre1);
+
+
+
+// QST 2:
+
+<?php
+for ($i=1; $i<= 6; $i++) {
+    echo "<h$i>titre $i</h$i>";
+}
+?>
