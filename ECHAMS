@@ -29,8 +29,14 @@ Chapitre.prototype.ChapitreLong = function (){
     return this.nombre_pages>100;
 };
 
-let e = new Chapitre('Algebre',201,1);
-console.log(e.ChapitreLong());
+let ch1 = new Chapitre('Algebre',201,1);
+console.log(ch1.ChapitreLong());
+
+let ch2 = new Chapitre('Analyse',189,2);
+console.log(ch2.ChapitreLong());
+
+let ch3 = new Chapitre('Probabilite',50,3);
+console.log(ch3.ChapitreLong());
 
 //Livre
 function Livre(id,titre,prix,chapitre = []){
