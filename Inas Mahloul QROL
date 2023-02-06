@@ -1,0 +1,88 @@
+////////QST 1///////////
+let somme=0;
+for(let nb=1;nb<=50;nb++){
+    if( nb%3==0 && nb%5==0){
+        somme+= nb;
+    }
+}
+console.log("la somme est:",somme);
+
+///////QST 2///////////
+let tab=[8,1,41,14,5,7,66];
+let tab_pair=[];
+let tab_impair=[];
+for(let a=0;a<tab.length;a++){
+if(tab[a]%2===0){
+tab_pair.push(tab[a]);
+}else{
+tab_impair.push(tab[a]);
+}
+}
+console.log(tab_pair);
+console.log(tab_impair);
+
+
+//////////////////QST3///////////////
+function chapitre(nom,nombre_pages,position){
+    this.nom=nom;
+    this.nombre_pages=nombre_pages;
+    this.position=position;
+}
+//methode:
+chapitre.prototype.chapitreLong=function(){
+    if(this.nombre_pages>100){
+        return true;
+    }else{
+        return false;
+    }
+};
+function Livre(id,titre,prix,chapitres ){
+    this.id=id;
+    this.titre=titre;
+    this.prix=prix;
+    this.chapitres=chapitres;
+      
+    }
+
+//methode 1:
+Livre.prototype.sauterLongsChapitres=function(){
+    for(let i=0;i<this.chapitres.length;i++){
+        if(this.chapitres[i].nombre_pages>100){
+            chapitres.splice(i,1,);
+        }
+    }
+};
+    //methode 2:  par position:
+Livre.prototype.trierChapitres=function(nombre_pages){
+    this.chapitres.sort(function (a,b){
+        if (a[nombre_pages]<b[nombre_pages]){
+            return -1;
+        }else if (a[nombre_pages]>b[nombre_pages]){
+            return 1;
+        }else{
+            return 0;
+        }
+    });
+};
+
+/////////////////test//////////////////////
+    //Initialisation Chapitre
+    let Chap1= new chapitre("Bonjour",129,10);
+    let Chap2= new chapitre("Bonne nuit",80,120);
+    let Chap3= new chapitre("Au revoir",75,25);
+    //tableau des chapitres
+    let chapitres=[Chap1,Chap2,Chap3];
+    //Initialisation Livre
+    let Liv1= new Livre(45,"Liv1",300,chapitres);
+    let Liv2= new Livre(61,"Liv1",211,chapitres);
+    console.log(Chap1.chapitreLong());
+    Liv1.sauterLongsChapitres();
+    Liv1.trierChapitres("position");
+    console.table(Liv1.chapitres;
+    
+ //  qst php/////
+<?php
+for($i=1;$i<7;$i++){
+   echo "<h" ,$i,"> titre" , $i, "</h", $i, ">" ;
+}
+?>
