@@ -308,13 +308,13 @@
     Réponses :
     ```javascript
         function sommeDesMultiplesDe3(){
-        let M=0;
-        for(let i =0;i<=50;i++){
-            if (i % 3 == 0 && i % 5 == 0){
-            M += i;
+            let M=0;
+            for(let i =0;i<=50;i++){
+                if (i % 3 == 0 && i % 5 == 0){
+                M += i;
+                }
             }
-        }
-        return M;
+            return M;
         }
         console.log(sommeDesMultiplesDe3());
     ```
@@ -328,19 +328,19 @@
     Réponses :
     ```javascript
         function séparerLesValeursPairesEtImpaires(){
-        let tab = [1, -2, 3, 0, -1];
-        let pair = [];
-        let impair = [];
-        for (let v of tab) {
-            if (v % 2 == 0) {
-            pair.push(v);
-            } 
-            else {
-            impair.push(v);
+            let tab = [1, -2, 3, 0, -1];
+            let pair = [];
+            let impair = [];
+            for (let v of tab) {
+                if (v % 2 == 0) {
+                    pair.push(v);
+                } 
+                else {
+                    impair.push(v);
+                }
             }
-        }
-        console.log(pair);
-        console.log(impair);
+            console.log(pair);
+            console.log(impair);
         }
         séparerLesValeursPairesEtImpaires();
     ```
