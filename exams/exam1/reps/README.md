@@ -307,7 +307,14 @@
 
     Réponses :
     ```javascript
-        //code
+        for (let i = 0; i < 50; i++) {
+       let somme = 0;
+         if (i % 3 == 0 && i % 5 == 0) {
+         somme += i;
+         }
+        }
+         console.log(somme);
+
     ```
 
 2. Écrivez un programme JavaScript pour séparer les valeurs paires et impaires d'un tableau en deux tableaux (l'ordre n'est pas important).
@@ -318,7 +325,18 @@
 
     Réponses :
     ```javascript
-        //code
+            
+        let tab = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+        let tabP = [];
+        let tabImp = [];
+            for (let i of tab) {
+                if (tab[i] % 2 == 0) {
+                    tabP.push(i);
+                }     
+                if (tab[i] % 2 != 0) {
+                    tabImp.push(i);
+                }
+        }
     ```
 
 ### Analyser
@@ -342,7 +360,42 @@
 
     Réponses :
     ```javascript
-        //code
+        function Chapitre(nom, nbr_pages, position) {
+  this.nom = nom;
+  this.nbr_pages = nbr_pages;
+  this.position = position;
+}
+Chapitre.prototype.chapitreLong = function () {
+  if (this.nbr_pages > 100) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+function Livre(id, titre, prix, chapitre = []) {
+  this.id = id;
+  this.titre = titre;
+  this.prix = prix;
+  this.chapitre = chapitre;
+}
+Livre.prototype.sauterLongChapitre = function () {
+  if (this.chapitre.chapitreLong == true) {
+    this.chapitre.pop();
+  }
+};
+Livre.prototype.trierChapitre = function (position) {
+  this.Chapitre.sort(function (a, b) {
+    if (a[prop] < b[prop]) {
+      return -1;
+    } else if (a[prop] > b[prop]) {
+      return 1;
+    } else {
+      return 0;
+    }
+  });
+};
+
     ```
 
 2. Écrivez un code PHP pour afficher les titres HTML de h1 à h6 (utiliser une boucle for).
@@ -358,7 +411,10 @@
     Réponses :
     ```php
     <?php
-        //code
+        for ($i = 1; $i <= 6; $i++)
+        {
+            echo "<h$i>Titre $i</h$i>";
+        }
     ?>
     ```
 
