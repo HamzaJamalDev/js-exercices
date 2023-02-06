@@ -357,9 +357,9 @@
 
     Réponses :
     ```php
-    <?php
-        //code
-    ?>
+    <?php for ($i = 1; $i < 7; $i++) { ?>
+        <h1>titre <?= $i ?></h1>
+    <?php } ?>
     ```
 
 ## Remarques
