@@ -307,7 +307,16 @@
 
     Réponses :
     ```javascript
-        //code
+        function sommeDesMultiplesDe3(){
+        let M=0;
+        for(let i =0;i<=50;i++){
+            if (i % 3 == 0 && i % 5 == 0){
+            M += i;
+            }
+        }
+        return M;
+        }
+        console.log(sommeDesMultiplesDe3());
     ```
 
 2. Écrivez un programme JavaScript pour séparer les valeurs paires et impaires d'un tableau en deux tableaux (l'ordre n'est pas important).
@@ -318,7 +327,22 @@
 
     Réponses :
     ```javascript
-        //code
+        function séparerLesValeursPairesEtImpaires(){
+        let tab = [1, -2, 3, 0, -1];
+        let pair = [];
+        let impair = [];
+        for (let v of tab) {
+            if (v % 2 == 0) {
+            pair.push(v);
+            } 
+            else {
+            impair.push(v);
+            }
+        }
+        console.log(pair);
+        console.log(impair);
+        }
+        séparerLesValeursPairesEtImpaires();
     ```
 
 ### Analyser
@@ -341,76 +365,42 @@
     - trierChapitres : prend un argument (soit "position", soit "nombre_pages"), ne retourne rien, et trie les chapitres par position ou par nombre de pages.
 
     Réponses :
-    ```javascript
-        
-        //APLIQUER 
-        //   1
-        function sommeDesMultiplesDe3(){
-        let M=0;
-        for(let i =0;i<=50;i++){
-            if (i % 3 == 0 && i % 5 == 0){
-            M += i;
-            }
-        }
-        return M;
-        }
-        console.log(sommeDesMultiplesDe3());
+    ```javascript 
 
-        //   2
-        function séparerLesValeursPairesEtImpaires(){
-        let tab = [1, -2, 3, 0, -1];
-        let pair = [];
-        let impair = [];
-        for (let v of tab) {
-            if (v % 2 == 0) {
-            pair.push(v);
-            } 
-            else {
-            impair.push(v);
-            }
-        }
-        console.log(pair);
-        console.log(impair);
-        }
-        séparerLesValeursPairesEtImpaires();
-
-        //ANALYSER 
-
-        //   1
         function Chapitre(nom, nombre_pages, position) {
-        this.nom = nom;
-        this.nombre_pages = nombre_pages;
-        this.position = position;
+            this.nom = nom;
+            this.nombre_pages = nombre_pages;
+            this.position = position;
         }
 
         Chapitre.prototype.chapitreLong = function() {
-        return (this.nombre_pages > 100);
+            return (this.nombre_pages > 100);
         };
 
         function Livre(id, titre, prix, chapitres) {
-        this.id = id;
-        this.titre = titre;
-        this.prix = prix;
-        this.chapitres = chapitres;
+            this.id = id;
+            this.titre = titre;
+            this.prix = prix;
+            this.chapitres = chapitres;
         }
 
         Livre.prototype.sauterLongsChapitres = function() {
-        let chapitresCourts = [];
-        for (let chapitre of this.chapitres) {
-            if (!chapitre.chapitreLong()) {
-            chapitresCourts.push(chapitre);
+            let chapitresCourts = [];
+            for (let chapitre of this.chapitres) {
+                if (!chapitre.chapitreLong()) {
+                    chapitresCourts.push(chapitre);
+                }
             }
-        }
-        this.chapitres = chapitresCourts;
+            this.chapitres = chapitresCourts;
         };
 
         Livre.prototype.trierChapitres = function(arg) {
-        if (arg == 'position') {
-            this.chapitres.sort((a, b) => a.position - b.position);
-        } 
-        else if (arg == 'nombre_pages') {
-            this.chapitres.sort((a, b) => a.nombre_pages - b.nombre_pages);
-        }
+            if (arg == 'position') {
+                this.chapitres.sort((a, b) => a.position - b.position);
+            } 
+            else if (arg == 'nombre_pages') {
+                this.chapitres.sort((a, b) => a.nombre_pages - b.nombre_pages);
+            }
         }
 
     ```
