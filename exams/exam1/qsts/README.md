@@ -255,12 +255,25 @@
 
     Exemple :
     15 + 30 + 45 = 90
+    
 
 2. Écrivez un programme JavaScript pour séparer les valeurs paires et impaires d'un tableau en deux tableaux (l'ordre n'est pas important).
 
     Exemple :
     [1, -2, 3, 0, -1] -> [1, 3, -1] et [-2, 0]
+Correction
+function trie(tab){
+    let pair=[];
+    let impair=[];
+    for (let i of tab){
+        if(i%2==0) pair.push(i);
+    }else   impair.push(i);
+    };
 
+
+for(let element of trie([1, -2, 3, 0, -1])){
+    console.log(trie(element));
+}
 ### Analyser
 1. Écrivez un constructeur appelé Chapitre, qui a 3 propriétés :
     - nom : une chaîne de caractères.
@@ -288,8 +301,37 @@
     <h4>titre 4</h4>
     <h5>titre 5</h5>
     <h6>titre 6</h6>
-    ```
 
+CORRECTION 
+
+```
+function chapitre(nom,nb_page,position){
+    this.nom=nom;
+    this.nb_page=nb_page;
+    this.position=position;
+}
+chapitre.prototype.chapitrelong=function(){
+    if (Object.keys(nb_page).length>100) return true;
+    else return false;
+}
+function livre(id,titre,prix,chapitre){
+    this.id=id;
+    this.titre=titre;
+    this.prix=prix;
+    this.chapire=chapitre;
+}
+livre.prototype.sauterlongschapitre=function(){
+    for(let i=0;i<this.chapitre.length;i++){
+        if(this.chapitre[i].nb_page>100) this.chapitre.splice(i,1);
+    }
+}
+livre.prototype.trierchapitre=function(position){
+
+
+}
+for ($i=0;$i<7;i++){
+    echo "h{$i}> titre {$i}</h{$i}>\n";
+}
 ## Remarques
 - Pour chaque question dans la partie QCM :
     - 1 choix est vrai, les autres sont faux.
