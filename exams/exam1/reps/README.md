@@ -381,8 +381,15 @@ function Livre (id, titre, prix, chapitres){
     this.chapitres = chapitres;
 }
 Livre.prototype.sauterLongsChapitres = function (){
-}
-Livre.prototype.trierChapitres = function (){
+    let chapitresCourts =[];
+    for ( let Chapitre of this.chapitres){
+    if (!Chapitre.chapitreLong()){
+    chapitresCourts.push(Chapitre);
+    }
+    }
+    this.chapitres = chapitresCourts;
+};
+Livre.prototype.trierChapitres = function () {
 }
 
 2. Écrivez un code PHP pour afficher les titres HTML de h1 à h6 (utiliser une boucle for).
