@@ -291,7 +291,7 @@
     ```
 
     Réponses :
-    - (1) getElementByClassName
+    - (1) getElementsByClassName
     - (2) querySelector("button")
     - (3) 0
     - (4) addEventListener
@@ -305,7 +305,7 @@
     Exemple :
     15 + 30 + 45 = 90
 
-    Réponses :
+    Réponse :
     ```javascript
         //code
     ```
@@ -316,7 +316,7 @@
     [1, -2, 3, 0, -1] -> [1, 3, -1] et [-2, 0]
 
 
-    Réponses :
+    Réponse :
     ```javascript
         //code
     ```
@@ -340,7 +340,7 @@
     - sauterLongsChapitres : ne prend aucun paramètre, ne renvoie rien, et supprime les chapitres longs de plus de 100 pages.
     - trierChapitres : prend un argument (soit "position", soit "nombre_pages"), ne retourne rien, et trie les chapitres par position ou par nombre de pages.
 
-    Réponses :
+    Réponse :
     ```javascript
         //code
     ```
@@ -355,7 +355,7 @@
     <h6>titre 6</h6>
     ```
 
-    Réponses :
+    Réponse :
     ```php
     <?php
         //code
