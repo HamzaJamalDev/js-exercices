@@ -80,7 +80,12 @@ Livre.prototype.sauterLongsChapitres=function(){
 }
 
 Livre.prototype.trierChapitre=function(position){
-    this.Chapitres.sort(position);
+    this.Chapitres.sort(function(a,b){
+    if(a[position]<b[position]){return -1;}
+    else if(a[position]>b[position]){return 1;}
+    else{return 0;}
+    }
+    );
 }
 
 
@@ -88,4 +93,4 @@ let Chapitre_1=new Chapitre("intro",20,1);
 let Chapitre_2=new Chapitre("chap2",200,2);
 let Livre1=new Livre (1,"a premiere vue",200,[Chapitre_1,Chapitre_2]);
 console.log(Chapitre_1.chapitreLong());
-console.log(Livre1.trierChapitre());
+console.log(Livre1.trierChapitre(position));
