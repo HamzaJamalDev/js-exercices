@@ -308,6 +308,12 @@
     Réponses :
     ```javascript
         //code
+        function somme() {
+        s=0; 
+        for(let i=0;i<50;i++){  
+        if(i%3==0 && i%5==0)     s+=i   
+        };    return s;
+        }console.log(somme());
     ```
 
 2. Écrivez un programme JavaScript pour séparer les valeurs paires et impaires d'un tableau en deux tableaux (l'ordre n'est pas important).
@@ -319,6 +325,7 @@
     Réponses :
     ```javascript
         //code
+     
     ```
 
 ### Analyser
