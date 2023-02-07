@@ -306,9 +306,18 @@
     15 + 30 + 45 = 90
 
     Réponse :
-    ```javascript
-        //code
-    ```
+    function Somme(tab){
+    let s=0;
+    for(i=0; i< tab.length ; i++){
+        if(tab[i]%3 == 0 && tab[i]%5 == 0){
+            s= s+ tab[i];
+    }
+}
+    return s;
+}
+   let s = Somme([15,30,45]);
+console.log(s);
+
 
 2. Écrivez un programme JavaScript pour séparer les valeurs paires et impaires d'un tableau en deux tableaux (l'ordre n'est pas important).
 
@@ -317,9 +326,21 @@
 
 
     Réponse :
-    ```javascript
-        //code
-    ```
+    function Separation(tab1){
+    let tab2=[];
+    let tab3=[];
+    for(i=0; i< tab1.length ; i++){
+        if(tab1[i]%2 == 0){
+            tab3.push(tab1[i]);
+        } else{
+            tab2.push(tab1[i]);
+        }
+    }
+    return [tab2,tab3];
+}
+let tab = Separation([1,-2,3,0,-1]);
+console.log(tab);
+
 
 ### Analyser
 1. Écrivez un constructeur appelé Chapitre, qui a 3 propriétés :
@@ -341,9 +362,28 @@
     - trierChapitres : prend un argument (soit "position", soit "nombre_pages"), ne retourne rien, et trie les chapitres par position ou par nombre de pages.
 
     Réponse :
-    ```javascript
-        //code
-    ```
+    function Chapitre (nom, nombre_pages, possition){
+    this.nom = nom;
+    this.nombre_pages = nombre_pages;
+    this.possition = possition;
+}
+Chapitre.prototype.chapitreLong = function (){
+    if (this.nombre_pages > 100){
+        return true;
+    } else {
+        return false;
+    }
+}
+function Livre (id, titre, prix, chapitres){
+    this.id = id;
+    this.titre = titre;
+    this.prix = prix;
+    this.chapitres = chapitres;
+}
+Livre.prototype.sauterLongsChapitres = function (){
+}
+Livre.prototype.trierChapitres = function (){
+}
 
 2. Écrivez un code PHP pour afficher les titres HTML de h1 à h6 (utiliser une boucle for).
     ```html
@@ -356,11 +396,11 @@
     ```
 
     Réponse :
-    ```php
     <?php
-        //code
+    for ($i=0; $i<=6 ; $i++){
+        echo "<h$i> titre $i </h$i>";
+    }
     ?>
-    ```
 
 ## Remarques
 - Pour chaque question dans la partie QCM :
