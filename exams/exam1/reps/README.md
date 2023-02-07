@@ -307,7 +307,13 @@
 
     Réponses :
     ```javascript
-        //code
+        let somme = 0;
+
+        for (let i = 0; i < 50; i++) 
+            if (i % 3 && i % 5) 
+                somme += i;
+    
+        console.log(somme);
     ```
 
 2. Écrivez un programme JavaScript pour séparer les valeurs paires et impaires d'un tableau en deux tableaux (l'ordre n'est pas important).
@@ -318,7 +324,19 @@
 
     Réponses :
     ```javascript
-        //code
+        Pairs = []
+        Impairs = []
+
+        for(let i of x)
+        {
+            if (i % 2)
+                Pairs.push(i);
+            else
+                Impairs.push(i);
+        }
+        
+        console.log(Pairs)
+        console.log(Impairs)
     ```
 
 ### Analyser
@@ -342,7 +360,41 @@
 
     Réponses :
     ```javascript
-        //code
+        function Chapitre(n, nb, p)
+        {
+            this.nom = n
+            this.nombre_pages = nb
+            this.position = p
+        }
+
+        Chapitre.prototype.chapitreLong = function()
+        {
+            return this.nombre_pages > 100;
+        }
+
+        function Livre(i, t, p, c)
+        {
+            this.id = i
+            this.titre = t
+            this.prix = p
+            this.chapitres = c
+        }
+        Livre.prototype.sauterLongsChapitres = function()
+        {
+            for (let i = 0; i < this.chapitres.length; i++)
+            {
+                if (this.chapitres[i].chapitreLong())
+                {
+                    this.chapitres.splice(i,1)
+                    i--
+                }
+            }
+        }
+
+        Livre.prototype.trierChapitres = function()
+        {
+            this.chapitres.sort((x,y) => x.nb - y.nb)
+        }
     ```
 
 2. Écrivez un code PHP pour afficher les titres HTML de h1 à h6 (utiliser une boucle for).
