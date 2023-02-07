@@ -70,26 +70,17 @@ function Livre (id,titre,prix,Chapitre=[]){
     this.id=id;
     this.titre=titre;
     this.prix=prix;
-    this.Chapitre=Chapitre;
+    this.Chapitres=Chapitre;
 }
 Livre.prototype.sauterLongsChapitres=function(){
-    let liv =[];
-    for(let i=0;i<this.Chapitre.length;i++){
-        if(this.Chapitre[i].nombre_page >100)
-        liv.splice(this.Chapitre[i].nombre_page,0);
+    for(let i=0;i<this.Chapitres.length;i++){
+        if(this.Chapitres[i].nombre_page >100)
+        this.Chapitres.splice(i,1);
     }
 }
 
-Livre.prototype.trierChapitre=function(prop){
-    this.chapitres.sort(function(a,b){
-        if(a[prop]<b[prop]){
-            return -1;
-        }
-        else if(a[prop]>b[prop]){
-            return 1;
-        }
-        else{return 0;}
-    })
+Livre.prototype.trierChapitre=function(position){
+    this.Chapitres.sort(position);
 }
 
 
@@ -97,3 +88,4 @@ let Chapitre_1=new Chapitre("intro",20,1);
 let Chapitre_2=new Chapitre("chap2",200,2);
 let Livre1=new Livre (1,"a premiere vue",200,[Chapitre_1,Chapitre_2]);
 console.log(Chapitre_1.chapitreLong());
+console.log(Livre1.trierChapitre());
