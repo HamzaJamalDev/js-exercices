@@ -310,7 +310,7 @@
         let somme = 0;
 
         for (let i = 0; i < 50; i++) 
-            if (i % 3 && i % 5) 
+            if (i % 3 == 0 && i % 5 == 0) 
                 somme += i;
     
         console.log(somme);
@@ -329,7 +329,7 @@
 
         for(let i of x)
         {
-            if (i % 2)
+            if (i % 2 === 0)
                 Pairs.push(i);
             else
                 Impairs.push(i);
