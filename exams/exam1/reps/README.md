@@ -307,7 +307,15 @@
 
     Réponse :
     ```javascript
-        //code
+        let sum = 0;
+        for (let i = 0; i < 50; i++)
+        {
+            if (i % 3 === 0 || i % 5 === 0)
+            {
+                sum += i;
+            }
+        }
+        console.log(sum);
     ```
 
 2. Écrivez un programme JavaScript pour séparer les valeurs paires et impaires d'un tableau en deux tableaux (l'ordre n'est pas important).
@@ -318,7 +326,18 @@
 
     Réponse :
     ```javascript
-        //code
+        Let Valeurs = [1, -2, 3, 0, -1];
+        let V_paires  = [], V_impaires  = [];
+        for (let i = 0; i < Valeurs.length; i++)
+        {
+            if (Valeurs[i] % 2 == 0) {
+                 V_paires.push(Valeurs[i]);
+            } else {
+                V_impaires.push(Valeurs[i]);
+            }
+        }
+        console.log("Les valeurs paires : " + V_paires);
+        console.log("Les valeurs impaires  : " + V_impaires);
     ```
 
 ### Analyser
@@ -342,7 +361,45 @@
 
     Réponse :
     ```javascript
-        //code
+        function Chapitre(nom, nombre_pages, position)
+        {
+            this.nom = nom;
+            this.nombre_pages = nombre_pages;
+            this.position = position;
+        }
+        Chapitre.prototype.chapitreLong = function()
+        {
+            return this.nombre_pages > 100;
+        }
+        function Livre(id, titre, prix, chapitres)
+        {
+            this.id = id;
+            this.titre = titre;
+            this.prix = prix;
+            this.chapitres = chapitres;
+        }
+        Livre.prototype.sauterLongsChapitres = function()
+        {
+            for (let i = 0 ; i < this.chapitres.length; i++)
+            {
+                if (this.chapitres[i].chapitreLong())
+                {
+                    this.chapitres.splice(i, 1);
+                }
+            }
+        }
+        Livre.prototype.trierChapitres = function(prop)
+        {
+            this.chapitres.sort(function (a, b) {
+                if (a[prop] < b[prop]) {
+                    return -1;
+                } else if (a[prop] > b[prop]) {
+                     return 1;
+                } else {
+                     return 0;
+                }
+            });
+        }
     ```
 
 2. Écrivez un code PHP pour afficher les titres HTML de h1 à h6 (utiliser une boucle for).
@@ -359,6 +416,10 @@
     ```php
     <?php
         //code
+        for ($i = 1; $i <= 6; $i++)
+        {
+            echo "<h$i>Titre $i</h$i>";
+        }
     ?>
     ```
 
