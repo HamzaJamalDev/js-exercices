@@ -361,6 +361,83 @@
         //code
     ?>
     ```
+//QROL : 
+//Appliquer:
+
+let sum = 0;
+for (let i = 1; i < 50; i++) {
+  if (i % 3 === 0 || i % 5 === 0) {
+    sum += i;
+  }
+}
+console.log(sum);
+
+2////
+
+let arr = [1, -2, 3, 0, -1];
+let odds = [];
+let evens = [];
+
+for (let i = 0; i < arr.length; i++) {
+  if (arr[i] % 2 === 0) {
+    evens.push(arr[i]);
+  } else {
+    odds.push(arr[i]);
+  }
+}
+
+console.log("Odds: ", odds);
+console.log("Evens: ", evens);
+
+
+
+//Analyse:
+
+
+// Constructeur Chapitre
+function Chapitre(nom, nombre_pages, position) {
+  this.nom = nom;
+  this.nombre_pages = nombre_pages;
+  this.position = position;
+}
+
+// Méthode chapitreLong
+Chapitre.prototype.chapitreLong = function() {
+  return this.nombre_pages > 100;
+};
+
+// Constructeur Livre
+function Livre(id, titre, prix, chapitres) {
+  this.id = id;
+  this.titre = titre;
+  this.prix = prix;
+  this.chapitres = chapitres;
+}
+
+// Méthode sauterLongsChapitres
+Livre.prototype.sauterLongsChapitres = function() {
+  this.chapitres = this.chapitres.filter(function(chapitre) {
+    return !chapitre.chapitreLong();
+  });
+};
+
+// Méthode trierChapitres
+Livre.prototype.trierChapitres = function(critere) {
+  this.chapitres.sort(function(a, b) {
+    return a[critere] - b[critere];
+  });
+};
+
+//PHP EXERCICE:
+<?php
+for ($i = 1; $i <= 6; $i++) {
+  echo "<h$i>titre $i</h$i>";
+}
+?>
+
+
+
+
 
 ## Remarques
 - Pour chaque question dans la partie QCM :
