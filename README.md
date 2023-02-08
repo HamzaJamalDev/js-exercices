@@ -6,3 +6,5 @@ Solutions des exercices JavaScript traités au cours.
 [Dossier du cours](https://drive.google.com/drive/folders/159GTJZIt3lVuPEdoGbV6PnwkniTyKP8a?usp=sharing)
 
 [Examen Blanc](./exams/exam1/qsts/README.md)
+
+[Examen](./exams/exam2/qsts/README.md)
