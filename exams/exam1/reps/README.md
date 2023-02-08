@@ -300,15 +300,21 @@
 ## QROL (10 points)
 ### Comprendre et retenir
 ### Appliquer
-1. Écrivez un programme JavaScript pour calculer la somme des multiples de 3 et 5 inférieurs à 50 (utiliser une boucle for).
+ 1. Écrivez un programme JavaScript pour calculer la somme des multiples de 3 et 5 inférieurs à 50 (utiliser une boucle for).
 
     Exemple :
     15 + 30 + 45 = 90
 
     Réponse :
-    ```javascript
-        //code
-    ```
+   let som=0;
+    for(let i=0;i<50;i++)
+      {
+        if(i%3===0 && i%5===0)
+        {
+           som+=i;
+        }
+      }
+    console.log(som);
 
 2. Écrivez un programme JavaScript pour séparer les valeurs paires et impaires d'un tableau en deux tableaux (l'ordre n'est pas important).
 
@@ -317,10 +323,33 @@
 
 
     Réponse :
-    ```javascript
-        //code
-    ```
-
+    let tab=[2,-1,3,0,-5];
+    function table_parite(tab)
+    {
+        let tab_paire=[];
+        let tab_impaire=[];
+        for(let i=0;i<tab.length;i++)
+        {
+            if(tab[i]%2===0)
+            {
+                tabu_paire.push(tab[i]);
+            }
+            else{
+                tab_impaire.push(tab[i]);
+            }
+        }
+        console.log(" tableau paire:")
+            for(let i=0;i<tab_paire.length;i++)
+              {
+                 console.log(tab_paire[i]);
+              }
+          console.log(" tableau impaire:")
+              for(let i=0;i<tab_impaire.length;i++)
+              {
+                  console.log(tab_impaire[i]);
+              }
+    }
+   table_parite(tab);
 ### Analyser
 1. Écrivez un constructeur appelé Chapitre, qui a 3 propriétés :
     - nom : une chaîne de caractères.
@@ -341,9 +370,56 @@
     - trierChapitres : prend un argument (soit "position", soit "nombre_pages"), ne retourne rien, et trie les chapitres par position ou par nombre de pages.
 
     Réponse :
-    ```javascript
-        //code
-    ```
+    function chapitre(nom,nombre_page,position)
+ {
+    this.nom=nom;
+    this.nombre_page=nombre_page;
+    this.position=position;
+ }
+
+ chapitre.prototype.chapitreLong=function()
+ {
+    if(this.nombre_page>100)
+          {  return true;}
+     else
+         { return false; }
+ }
+ function livre(id,titre,prix,chapitres)
+ {
+    this.id=id;
+    this.titre=titre;
+    this.prix=prix;
+    this.chapitres=chapitres;
+ }
+ livre.prototype.sauterLongsChapitres=function()
+ {
+    for(let i=0;i<this.chapitres.length;i++)
+    {
+        if(this.chapitres[i]>100)
+        {
+            this.chapitres.splice(i,1);
+        }
+    }
+ }
+
+ livre.prototype.trierChapitre=function(prop)
+ {
+    this.chapitres.sort(function(a,b)
+    {
+        if(a[prop]<b[prop])
+        {
+            return-1;
+        }
+    else if(a[prop]>b[prop])
+     {
+        return 1;
+     }
+     else
+     {
+        return 0;
+     }
+    })
+ }
 
 2. Écrivez un code PHP pour afficher les titres HTML de h1 à h6 (utiliser une boucle for).
     ```html
@@ -356,12 +432,12 @@
     ```
 
     Réponse :
-    ```php
-    <?php
-        //code
-    ?>
-    ```
-
+   <?php
+for($i=1;$i<7;$i++)
+{ 
+  echo"<h$i> Titre $i</h$i>";
+}
+?>
 ## Remarques
 - Pour chaque question dans la partie QCM :
     - 1 choix est vrai, les autres sont faux.
