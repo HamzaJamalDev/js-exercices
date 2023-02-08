@@ -112,7 +112,7 @@
 
     for (let t of tab) {
         for (let i = 0; i < obj[t]; i++) {
-            x += tab[i];  1 1 2 1 1
+            x += tab[i];
         }
     }
 
