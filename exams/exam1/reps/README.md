@@ -367,3 +367,68 @@
     - 1 choix est vrai, les autres sont faux.
     - Vous obtiendrez 0,5 si la réponse est correcte, sinon 0.
 - Si vous proposez une solution ici pour la partie QROL sous forme de pull request, vous recevrez un bonus +1 dans l'examen final.
+
+
+
+--réponse partie QROL:
+
+--exercice1:
+ let sum = 0;
+ for (let i = 0; i < 50; i++) {
+   if (i % 3 === 0 || i % 5 === 0) {
+     sum += i;
+   }
+ }
+ console.log(sum);
+
+ --exercice2:
+ const nombres = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+ const NombresPaires = [];
+ const NombresImpaires = [];
+
+ for (let i = 0; i < nombres.length; i++) {
+   const nombre = nombres[i];
+   if (nombre % 2 === 0) {
+     NombresPaires.push(nombre);
+   } else {
+     NombresImpaires.push(nombre);
+   }
+ }
+
+ console.log("Pairs:", NombresPaires);
+ console.log("Impairs:", NombresImpaires);
+
+ --exercice3:
+ function Chapitre(nom, nombre_pages, position) {
+   this.nom = nom;
+   this.nombre_pages = nombre_pages;
+   this.position = position;
+
+   this.chapitreLong = function() {
+     return this.nombre_pages > 100;
+   };
+ }
+
+ function Livre(id, titre, prix, chapitres) {
+   this.id = id;
+   this.titre = titre;
+   this.prix = prix;
+   this.chapitres = chapitres;
+
+   this.sauterLongsChapitres = function() {
+     this.chapitres = this.chapitres.filter(function(chapitre) {
+       return !chapitre.chapitreLong();
+     });
+   };
+
+   this.trierChapitres = function(critere) {
+     this.chapitres.sort(function(a, b) {
+       return a[critere] - b[critere];
+     });
+   };
+ }
+
+ --exercice4:
+ for ($i = 1; $i <= 6; $i++) {
+   echo "<h$i>titre $i</h$i>";
+ }
