@@ -1,34 +1,34 @@
-# Examen Blanc
-[Montrer les réponses](../reps/README.md)
+# Examen Blanc - Réponses
+[Retourner à l'examen](../qsts/README.md)
 ## QCM (5 points)
 ### Comprendre et retenir
 1. Qu'est-ce qu'un commit Git?
-    - [ ] Le processus d'enregistrement des modifications dans un dépôt Git.
+    - [x] Le processus d'enregistrement des modifications dans un dépôt Git.
     - [ ] Le processus de transfert des modifications d'une branche vers une autre branche.
     - [ ] Le processus de création d'une nouvelle branche.
     - [ ] Aucune de ces réponses.
 
 2. JavaScript est un langage principalement
-    - [ ] Côté client.
+    - [x] Côté client.
     - [ ] Côté serveur.
     - [ ] Aucune de ces réponses.
 
 3. Quelle est la syntaxe correcte pour écrire un tableau JavaScript?
     - [ ] ```let couleurs = "red", "blue", "green";```
-    - [ ] ```let couleurs = ["red", "blue", "green"];```
+    - [x] ```let couleurs = ["red", "blue", "green"];```
     - [ ] ```let couleurs = "red, blue, green";```
     - [ ] ```let couleurs = (red, blue, green);```
 
 4. Un script PHP commence par
     - [ ]   ```<php```
     - [ ]   ```<link```
-    - [ ]   ```<?php```
+    - [x]   ```<?php```
     - [ ]   ```<script```
 
 ### Appliquer
 1. Quelle est la commande permettant de vérifier l'état du dépôt Git?
     - [ ]   ```git check```
-    - [ ]   ```git status```
+    - [x]   ```git status```
     - [ ]   ```git update```
     - [ ]   ```git report```
 
@@ -43,7 +43,7 @@
 
     - [ ] 30
     - [ ] Erreur
-    - [ ] 40
+    - [x] 40
     - [ ] NaN
 
 3. Quel est le résultat du code JavaScript suivant?
@@ -61,7 +61,7 @@
     ```
 
     - [ ] id
-    - [ ] 1
+    - [x] 1
     - [ ] Python Crash Course
     - [ ] Erreur
 
@@ -79,7 +79,7 @@
 
     - [ ] Une erreur car nous avons utilisé la propriété ```onclick``` au lieu de la propriété ```click```.
     - [ ] "bonsoir", le contenu du ```<p>``` sera modifié.
-    - [ ] "bonjour", le contenu ```<p>``` ne sera pas modifié.
+    - [x] "bonjour", le contenu ```<p>``` ne sera pas modifié.
     - [ ] Une erreur parce que nous avons utilisé ```document``` au lieu de ```window.document```.
 
 ### Analyser
@@ -102,7 +102,7 @@
     - [ ] 3 15
     - [ ] Erreur de syntaxe, nous ne pouvons pas commencer la boucle de -10.
     - [ ] 1 2
-    - [ ] 4 20
+    - [x] 4 20
 
 2. Quel est le résultat du code JavaScript suivant?
     ```javascript
@@ -122,16 +122,22 @@
     - [ ] 1
     - [ ] Erreur de syntaxe
     - [ ] 6
-    - [ ] 11211
+    - [x] 11211
 
 ## QROC (5 points)
 ### Comprendre et retenir
 1. Une fonction JavaScript peut être déclarée à l'aide du mot-clé (1) ________ suivi du nom de la fonction et d'un ensemble de paramètres entre parenthèses.
 
+    Réponses :
+    - (1) function
+
 ### Appliquer
 1. Remplissez le vide pour créer un commit git avec le message "commit 1".
 
-    ```git (1) ________ "commit 1"```
+    ```git (1) ________ "commit 1```
+
+    Réponses :
+    - (1) commit -m
 
 2. Affichez le message "bonjour".
     ```javascript
@@ -146,11 +152,19 @@
     }
     ```
 
+    Réponses :
+    - (1) 1
+    - (2) break
+
 3. Affichez le message "bonjour".
     ```javascript
     (1) ________ function (message) {
         console.log(message);} (2) ________;
     ```
+
+    Réponses :
+    - (1) (
+    - (2) )("bonjour")
 
 4. Remplissez le vide pour changer la couleur de fond du paragraphe en rouge.
     ```html
@@ -160,6 +174,10 @@
         p1.(2) ________ = "red";
     </script>
     ```
+
+    Réponses :
+    - (1) querySelector
+    - (2) style.backgroundColor
 
 ### Analyser
 1. Affichez ce modèle.
@@ -186,6 +204,13 @@
     console.log(modele);
     ```
 
+    Réponses :
+    - (1) 5
+    - (2) ligne - i + 1
+    - (3) " "
+    - (4) 2\*i
+    - (5) "\*"
+
 2. Répétez le message "bonjour" 3 fois.
     ```javascript
     function strNFois(str, n) {
@@ -200,6 +225,12 @@
     console.log(message);
     ```
 
+    Réponses :
+    - (1) n === 1
+    - (2) str
+    - (3) str
+    - (4) strNFois(str, n - 1)
+
 3. Supprimez les valeurs inférieures à 10 du tableau.
     ```javascript
     let tab = [0, 12, 1, 3, 20];
@@ -213,6 +244,11 @@
 
     console.log(tab);
     ```
+
+    Réponses :
+    - (1) tab[i] < 10
+    - (2) splice(i, 1);
+    - (3) i--
 
 4. Supprimez du tableau les objets ayant une note inférieure à 10.
     ```javascript
@@ -234,6 +270,12 @@
     console.log(notes);
     ```
 
+    Réponses :
+    - (1) i < notes.length
+    - (2) notes[i]["note"] < 10
+    - (3) splice(i, 1)
+    - (4) i++
+
 5. Changez le contenu du paragraphe en cliquant sur le bouton.
     ```html
     <p class="parag">bouton pas encore cliqué</p>
@@ -248,6 +290,13 @@
     </script>
     ```
 
+    Réponses :
+    - (1) getElementByClassName
+    - (2) querySelector("button")
+    - (3) 0
+    - (4) addEventListener
+    - (5) toDo
+
 ## QROL (10 points)
 ### Comprendre et retenir
 ### Appliquer
@@ -256,10 +305,38 @@
     Exemple :
     15 + 30 + 45 = 90
 
+    Réponses :
+    ```javascript
+        let sum = 0;
+        for (let i = 3; i < 50; i++) {
+        if (i % 3 === 0 && i % 5 === 0) {
+            sum += i;
+        }
+        }
+        console.log(sum);
+    ```
+
 2. Écrivez un programme JavaScript pour séparer les valeurs paires et impaires d'un tableau en deux tableaux (l'ordre n'est pas important).
 
     Exemple :
     [1, -2, 3, 0, -1] -> [1, 3, -1] et [-2, 0]
+
+
+    Réponses :
+    ```javascript
+        const arr = [1, -2, 3, 0, -1];
+        const odd = [];
+        const even = [];
+        for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 2 === 0) {
+            even.push(arr[i]);
+        } else {
+            odd.push(arr[i]);
+        }
+        }
+        console.log("Odd numbers: ", odd);
+        console.log("Even numbers: ", even);
+    ```
 
 ### Analyser
 1. Écrivez un constructeur appelé Chapitre, qui a 3 propriétés :
@@ -280,6 +357,61 @@
     - sauterLongsChapitres : ne prend aucun paramètre, ne renvoie rien, et supprime les chapitres longs de plus de 100 pages.
     - trierChapitres : prend un argument (soit "position", soit "nombre_pages"), ne retourne rien, et trie les chapitres par position ou par nombre de pages.
 
+    Réponses :
+    ```javascript
+       //3 Analyser
+        function Chapitre(nom,nombre_pages,position){
+            this.nom = nom;
+            this.nombre_pages = nombre_pages;
+            this.position = position;
+        }
+        Chapitre.prototype.chapitreLong = function(){
+            if(this.nombre_pages > 100){
+                return true;
+            }else{
+                return false;
+            }
+        }
+        function Livre(id,titre,prix,chapitres=[]){
+            
+            this.id = id;
+            this.titre = titre;
+            this.prix = prix;
+            this.chapitres = chapitres;
+        }
+
+        Livre.prototype.suaterLongsChapitres = function(){
+            this.chapitres.forEach(chapitre => {
+                if(chapitre.chapitreLong()){
+                    this.chapitres.splice(this.chapitres.indexOf(chapitre),1);
+                }
+            });
+        }
+        Livre.prototype.trierChapitres = function(position){
+            this.chapitres.forEach(chapitre => {
+                if(chapitre.position === position){
+                    this.chapitres.splice(this.chapitres.indexOf(chapitre),1);
+                    this.chapitres.unshift(chapitre);
+                }    
+            });
+        }
+
+        const book1 = new Livre(1,"Harry Potter", 20,
+        [
+            new Chapitre("Chapter 1", 120, 1), 
+            new Chapitre("Chapter 2", 50, 2), 
+            new Chapitre("Chapter 3", 80, 3)
+        ]);
+        const chapter1 = new Chapitre("Chapter 1", 120, 1);
+
+        console.log(chapter1.chapitreLong()); // true
+        console.log(book1.chapitres); 
+        book1.suaterLongsChapitres();
+        console.log(book1.chapitres); 
+        book1.trierChapitres(1);
+        console.log(book1.chapitres); // [Chapitre]
+    ```
+
 2. Écrivez un code PHP pour afficher les titres HTML de h1 à h6 (utiliser une boucle for).
     ```html
     <h1>titre 1</h1>
@@ -290,8 +422,17 @@
     <h6>titre 6</h6>
     ```
 
+    Réponses :
+    ```php
+     <?php
+        for($i = 1; $i < 7; $i++){
+            echo "<h$i> titre $i <h$i>";
+        }
+    ?>
+    ```
+
 ## Remarques
 - Pour chaque question dans la partie QCM :
     - 1 choix est vrai, les autres sont faux.
     - Vous obtiendrez 0,5 si la réponse est correcte, sinon 0.
-- Si vous proposez une solution [ici](../reps/README.md) pour la partie QROL sous forme de pull request, vous recevrez un bonus +1 dans l'examen final.
+- Si vous proposez une solution ici pour la partie QROL sous forme de pull request, vous recevrez un bonus +1 dans l'examen final.
