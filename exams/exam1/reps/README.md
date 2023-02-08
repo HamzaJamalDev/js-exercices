@@ -306,10 +306,15 @@
     15 + 30 + 45 = 90
 
     Réponse :
-    ```javascript
-        //code
-    ```
-
+    let som=0;
+    for(let i=0;i<50;i++)
+      {
+        if(i%3===0 && i%5===0)
+        {
+           som+=i;
+        }
+      }
+    console.log(som);
 2. Écrivez un programme JavaScript pour séparer les valeurs paires et impaires d'un tableau en deux tableaux (l'ordre n'est pas important).
 
     Exemple :
@@ -317,10 +322,33 @@
 
 
     Réponse :
-    ```javascript
-        //code
-    ```
-
+    let tab=[1,-2,3,0,-1];
+    function parite(tab)
+    {
+        let paire=[];
+        let impaire=[];
+        for(let i=0;i<tab.length;i++)
+        {
+            if(tab[i]%2===0)
+            {
+               paire.push(tab[i]);
+            }
+            else{
+                impaire.push(tab[i]);
+            }
+        }
+        console.log(" tab paire:")
+            for(let i=0;i<paire.length;i++)
+              {
+                 console.log(paire[i]);
+              }
+          console.log(" tabimpaire:")
+              for(let i=0;i<impaire.length;i++)
+              {
+                  console.log(impaire[i]);
+              }
+    }
+   parite(tab);
 ### Analyser
 1. Écrivez un constructeur appelé Chapitre, qui a 3 propriétés :
     - nom : une chaîne de caractères.
@@ -341,9 +369,56 @@
     - trierChapitres : prend un argument (soit "position", soit "nombre_pages"), ne retourne rien, et trie les chapitres par position ou par nombre de pages.
 
     Réponse :
-    ```javascript
-        //code
-    ```
+   function chapitre(nom,nombre_page,position)
+ {
+    this.nom=nom;
+    this.nombre_page=nombre_page;
+    this.position=position;
+ }
+
+ chapitre.prototype.chapitreLong=function()
+ {
+    if(this.nombre_page>100)
+          {  return true;}
+     else
+         { return false; }
+ }
+ function livre(id,titre,prix,chapitres)
+ {
+    this.id=id;
+    this.titre=titre;
+    this.prix=prix;
+    this.chapitres=chapitres;
+ }
+ livre.prototype.sauterLongsChapitres=function()
+ {
+    for(let i=0;i<this.chapitres.length;i++)
+    {
+        if(this.chapitres[i]>100)
+        {
+            this.chapitres.splice(i,1);
+        }
+    }
+ }
+
+ livre.prototype.trierChapitre=function(prop)
+ {
+    this.chapitres.sort(function(a,b)
+    {
+        if(a[prop]<b[prop])
+        {
+            return-1;
+        }
+    else if(a[prop]>b[prop])
+     {
+        return 1;
+     }
+     else
+     {
+        return 0;
+     }
+    })
+ }
 
 2. Écrivez un code PHP pour afficher les titres HTML de h1 à h6 (utiliser une boucle for).
     ```html
@@ -356,11 +431,12 @@
     ```
 
     Réponse :
-    ```php
-    <?php
-        //code
-    ?>
-    ```
+           <?php
+for($i=1;$i<7;$i++)
+{ 
+  echo"<h$i> Titre $i</h$i>";
+}
+?>
 
 ## Remarques
 - Pour chaque question dans la partie QCM :
