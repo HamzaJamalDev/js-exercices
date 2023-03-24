@@ -307,7 +307,15 @@
 
     Réponse :
     ```javascript
-        //code
+    let s = 0;
+
+    for (let i = 1; i < 50; i++) {
+        if (i % 3 === 0 && i % 5 === 0) {
+            s += i;
+        }
+    }
+
+    console.log(s);
     ```
 
 2. Écrivez un programme JavaScript pour séparer les valeurs paires et impaires d'un tableau en deux tableaux (l'ordre n'est pas important).
@@ -318,7 +326,20 @@
 
     Réponse :
     ```javascript
-        //code
+    let tab = [1, -2, 3, 0, -1];
+    let paires = [];
+    let impaires = [];
+
+    for (let valeur of tab) {
+        if (valeur % 2 === 0) {
+            paires.push(valeur);
+        } else {
+            impaires.push(valeur);
+        }
+    }
+
+    console.log(impaires);
+    console.log(paires);
     ```
 
 ### Analyser
@@ -342,7 +363,71 @@
 
     Réponse :
     ```javascript
-        //code
+    function Chapitre(nom = "", nombre_pages = 0, position = 0) {
+        this.nom = nom;
+        this.nombre_pages = nombre_pages;
+        this.position = position;
+    }
+
+    Chapitre.prototype.chapitreLong = function () {
+        if (this.nombre_pages > 100) {
+            return true;
+        } else {
+            return false;
+        }
+    };
+
+    function Livre(id = 0, titre = "", prix = 0.0, chapitres = []) {
+        this.id = id;
+        this.titre = titre;
+        this.prix = prix;
+        this.chapitres = chapitres;
+    }
+
+    Livre.prototype.sauterLongsChapitres = function () {
+        for (let i = 0; i < this.chapitres.length; i++) {
+            if (this.chapitres[i].chapitreLong()) {
+                this.chapitres.splice(i, 1);
+                i--;
+        }
+    }
+    };
+
+    Livre.prototype.trierChapitres = function (orderBy) {
+        if (orderBy === "position" || orderBy === "nombre_pages") {
+            this.chapitres.sort(function (chap1, chap2) {
+                if (chap1[orderBy] < chap2[orderBy]) {
+                    return -1;
+                } else if (chap1[orderBy] > chap2[orderBy]) {
+                    return 1;
+                } else {
+                    return 0;
+                }
+            });
+        }
+    };
+
+    // test
+    let chapitre1 = new Chapitre("Introduction", 10, 1);
+    let chapitre2 = new Chapitre("Chapitre 1", 100, 2);
+    let chapitre3 = new Chapitre("Chapitre 2", 110, 3);
+    let chapitre4 = new Chapitre("Chapitre 3", 40, 4);
+    let chapitre5 = new Chapitre("Chapitre 4", 125, 5);
+
+    let livre1 = new Livre(1, "Mon livre", 199.99, [
+    chapitre1,
+    chapitre2,
+    chapitre5,
+    chapitre4,
+    chapitre3,
+    ]);
+
+    livre1.sauterLongsChapitres();
+    console.log(livre1.chapitres);
+    livre1.trierChapitres("nombre_pages");
+    console.log(livre1.chapitres);
+    livre1.trierChapitres("position");
+    console.log(livre1.chapitres);
     ```
 
 2. Écrivez un code PHP pour afficher les titres HTML de h1 à h6 (utiliser une boucle for).
@@ -358,7 +443,9 @@
     Réponse :
     ```php
     <?php
-        //code
+        for($i = 1; $i < 7; $i++){
+            echo "<h$i>titre $i</h$i>";
+        }
     ?>
     ```
 

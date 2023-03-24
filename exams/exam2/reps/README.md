@@ -290,16 +290,44 @@
 
     Réponse :
     ```javascript
-        //code
+    n = 4;
+    s = 0;
+
+    for(let i = 0; i <= n; i ++){
+        s += i ** 2; // s += i * i;
+    }
+
+    console.log(s);
     ```
 
 2. Écrivez un code JavaScript pour inverser un tableau.
 
     Exemple : [1, 4, 3, 0] -> [0, 3, 4, 1]
 
-    Réponse :
+    Réponse 1 :
     ```javascript
-        //code
+    let tab = [1, 4, 3, 0];
+    let tab_inv = [];
+
+    for(let i = tab.length - 1; i >= 0; i--){
+        tab_inv.push(tab[i]);
+    }
+
+    console.log(tab_inv);
+    ```
+
+    Réponse 2 :
+    ```javascript
+    let tab = [1, 4, 3, 0];
+    let temp;
+
+    for(let i = 0; i < tab.length / 2; i++){
+        temp = tab[i];
+        tab[i] = tab[tab.length - 1 - i];
+        tab[tab.length - 1 - i] = temp;
+    }
+
+    console.log(tab);
     ```
 
 ### Analyser
@@ -321,7 +349,80 @@
 
     Réponse :
     ```javascript
-        //code
+    function Personne(nom = "", age = 0) {
+        this.nom = nom;
+        this.age = age;
+    }
+
+    Personne.prototype.ageInvalide = function () {
+        if (this.age > 150 || this.age < 1) {
+            return true;
+        } else {
+            return false;
+        }
+    };
+
+    /*
+    Personne.prototype.ageInvalide = function () {
+        return this.age > 150 || this.age < 1;
+    };
+    */
+
+    function Ville(nom = "", population = []) {
+        this.nom = nom;
+        this.population = population;
+    }
+
+    Ville.prototype.ajouterNAns = function (n = 0) {
+        for (let i = 0; i < this.population.length; i++) {
+            this.population[i].age += n;
+
+            if (this.population[i].ageInvalide()) {
+            this.population.splice(i, 1);
+            i--;
+            }
+        }
+    };
+
+    Ville.prototype.soustraireNAns = function (n = 0) {
+        for (let i = 0; i < this.population.length; i++) {
+            this.population[i].age -= n;
+
+            if (this.population[i].ageInvalide()) {
+            this.population.splice(i, 1);
+            i--;
+            }
+        }
+    };
+
+    Ville.prototype.trierPopulation = function () {
+        this.population.sort(function (pers1, pers2) {
+            if (pers1["age"] < pers2["age"]) {
+            return -1;
+            } else if (pers1["age"] > pers2["age"]) {
+            return 1;
+            } else {
+            return 0;
+            }
+        });
+    };
+
+    // test
+    let personne1 = new Personne("Ahmed", 20);
+    let personne2 = new Personne("Aziz", 119);
+    let personne3 = new Personne("Meriam", 85);
+    let personne4 = new Personne("Zineb", 42);
+
+    let ville1 = new Ville("Casa", [personne1, personne2, personne3, personne4]);
+
+    ville1.ajouterNAns(35);
+    console.log(ville1.population);
+
+    ville1.soustraireNAns(60);
+    console.log(ville1.population);
+
+    ville1.trierPopulation();
+    console.log(ville1.population);
     ```
 
 2. Écrivez un code PHP pour afficher les nombres de 1 à 5 modulo 3 (utiliser une boucle for).
@@ -335,12 +436,41 @@
     </ul>
     ```
 
-    Réponse :
+    Réponse 1 :
     ```php
-    <?php
-        //code
-    ?>
+    <ul>
+        <?php
+        $resultats = ["zero", "un", "deux"];
+        for ($i = 1; $i <= 5; $i++) :
+        ?>
+            <li><?= $i; ?> mod 3 = <?= $resultats[$i % 3]; ?></li>
+        <?php
+        endfor;
+        ?>
+    </ul>
     ```
+
+    Réponse 2 :
+    ```php
+    <ul>
+        <?php
+        for ($i = 1; $i <= 5; $i++) {
+            $resultat = "";
+            if ($i % 3 == 0) {
+                $resultat = "zero";
+            } else if ($i % 3 == 1) {
+                $resultat = "un";
+            } else {
+                $resultat = "deux";
+            }
+        ?>
+            <li><?php echo $i; ?> mod 3 = <?php echo $resultat; ?></li>
+        <?php
+        }
+        ?>
+    </ul>
+    ```
+
 ## Remarques:
 - Pour chaque question dans la partie QCM :
     - 1 choix est vrai, les autres sont faux.
